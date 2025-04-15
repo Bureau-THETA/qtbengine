@@ -1,6 +1,6 @@
 # The Quantification Engine
 
-The QuanTB Engine is a free, open-source software library and desktop application that intends to develop quantification services for medicinal product stock, considering various consumption and replenishment scenarios.
+The QuanTB Engine is a free, open-source software library that intends to develop quantification services for medicinal product stock, considering various consumption and replenishment scenarios.
 	
 QuanTB Engine implements quantification through the morbidity method. The source data for quantification includes the prognosis period, order’s lead time,  monthly morbidity, treatment assignments, medicinal products stock, and stock replenishment orders. The result is daily quantification that includes stock, completed consumption, missed consumption, and replenished quantity. The daily quantifications are available for all days in the prognosis period.
 
