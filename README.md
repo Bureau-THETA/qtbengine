@@ -1,15 +1,23 @@
 # The Quantification Engine
+## Open-Sourced. Morbidity-Based. Public Health Ready
+## 📌 Project Overview
 
-The QuanTB Engine is a free, open-source software library that intends to develop quantification services for medicinal product stock, considering various consumption and replenishment scenarios.
-	
-QuanTB Engine implements quantification through the morbidity method. The source data for quantification includes the prognosis period, order’s lead time,  monthly morbidity, treatment assignments, medicinal products stock, and stock replenishment orders. The result is daily quantification that includes stock, completed consumption, missed consumption, and replenished quantity. The daily quantifications are available for all days in the prognosis period.
+Our **open-sourced Java-based software library** empowers:
 
-QuanTB Engine consumes logistic parameters, order, and stock data from the Logistic Information Management Systems (LIMS). The non-personal data morbidity and treatment assignments come from Health Information Management Systems (HIMS). 
+- Public health agencies  
+- Global health organizations  
+- Academic institutions  
+- Health tech innovators  
+- Pharmaceutical companies  
 
-Quantification services facilitate supply chain optimization for Logistic Information Management Systems (LIMS). Additionally, quantification services for Health Information Management Systems (HIMS) offer early warnings of stockouts or expirations while optimizing expenses.
+with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
 
-The Medicinal Products Digital Solutions Consortium is responsible for QuanTB Engine sustainability, world-class consulting and learning services, and community maintenance.
-	Free software, affordable consulting fees, and the opportunity to earn income through consulting services contribute to low total ownership costs.
+In use for **many years across more than 60 countries**, the library is designed to seamlessly integrate with **reported and estimated morbidity data**. It provides **transparent**, **scientifically robust projections** that are **fully customizable to local demand patterns**—helping optimize resource allocation, minimize stockouts, and ensure better preparedness for future health needs.
 
-***Read Startup.docx for quick starting*** 
+The result: **smarter decisions, stronger systems, and healthier populations**.
 
+---
+
+### 🚀 Get Started
+
+**Start forecasting smarter today** — [Download the software](#) or **[contact us](#)** to learn more about how we can support your health planning, research, and innovation efforts.
