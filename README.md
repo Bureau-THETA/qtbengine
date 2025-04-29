@@ -25,8 +25,8 @@ The result: **smarter decisions, stronger systems, and healthier populations**.
 
 The `qtbengine` repository is organized to help you explore, understand, and use the library effectively:
 
-
-- **`doc/`** — Contains real-world use cases and documentation to help you understand how the library applies to various scenarios.
+- **`bin/`** — Contains the ready-to-use library compiled under Java 21.
+- **`doc/`** — Contains real-world use cases to help you understand how the library applies to various scenarios.
 - **`examples/`** — Includes step-by-step guides and runnable examples to get you started with the library quickly.
 - **`qtbengine/`** — The heart of the project. This folder contains the Java source code that implements morbidity-based forecasting logic.
 
