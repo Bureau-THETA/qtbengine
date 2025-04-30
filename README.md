@@ -1,5 +1,5 @@
 # The Quantification Engine
-## Open-Sourced. Morbidity-Based. Public Health Ready
+## Open-Sourced. Morbidity data. Public Health Ready
 ### 📌 Project Overview
 
 Our **open-sourced Java-based software library** empowers **public health agencies, global health organizations, academic institutions, health tech innovators**, and **pharmaceutical companies** with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
