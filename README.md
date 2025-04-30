@@ -2,15 +2,7 @@
 ## Open-Sourced. Morbidity-Based. Public Health Ready
 ### 📌 Project Overview
 
-Our **open-sourced Java-based software library** empowers:
-
-- Public health agencies  
-- Global health organizations  
-- Academic institutions  
-- Health tech innovators  
-- Pharmaceutical companies  
-
-with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
+Our **open-sourced Java-based software library** empowers **public health agencies, global health organizations, academic institutions, health tech innovators**, and **pharmaceutical companies** with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
 
 In use for many years across more than 60 countries, the library is designed to integrate seamlessly with **reported and estimated morbidity data**. It provides **transparent**, **scientifically robust projections** that are **fully customizable to local demand patterns**—helping optimize resource allocation, minimize stockouts, and ensure better preparedness for future health needs.
 
