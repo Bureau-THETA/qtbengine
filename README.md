@@ -1,5 +1,5 @@
 # The Quantification Engine
-## Open-source. Scientifically robust projections. Fully customizable
+## Power Forecasting and Early Warning for Medicinal Products—Right Inside Your Health IT Stack
 ### 📌 Project Overview
 
 Our **open-sourced Java-based software library** empowers **public health agencies, global health organizations, academic institutions, health tech innovators**, and **pharmaceutical companies** with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
