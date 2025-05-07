@@ -40,9 +40,6 @@ import org.msh.quantb.services.io.ForecastingRegimenResultUIAdapter;
 import org.msh.quantb.services.io.ForecastingRegimenUIAdapter;
 import org.msh.quantb.services.io.KitDefinitionUIAdapter;
 import org.msh.quantb.services.io.MedicineUIAdapter;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-
 import jakarta.xml.bind.JAXBException;
 
 /**
@@ -124,7 +121,7 @@ public class Calculator {
 			File dir = new File(args[0]);
 			if (dir.isDirectory()) {
 				File[] directoryListing = dir.listFiles();
-				if (directoryListing != null) {
+				if (directoryListing != null && directoryListing.length>0) {
 					System.out.println("Press Enter to continue...");
 					System.in.read();
 					Date prevTime = new Date();
@@ -138,7 +135,8 @@ public class Calculator {
 								FileInputStream stream = new FileInputStream(child);
 								log("Processing " + child.getName(), logStream);
 								ForecastUIAdapter forecast = Calculator.instanceOf().load(stream, child.getName());
-								Calculator.instanceOf().calculate(forecast);
+								ForecastResult result=Calculator.instanceOf().calculate(forecast);
+								//logForecast(result,logStream);
 								log("processed", logStream);
 								prevTime = printDiag(prevTime, logStream);
 							} catch (FileNotFoundException e) {
@@ -158,15 +156,31 @@ public class Calculator {
 					logStream.close();
 				} else {
 					System.err.println(
-							"Usage: quantbcalc qtb_directory / any directory is empty " + dir.getAbsolutePath());
+							"Usage: quantbcalc qtb_directory" + dir.getAbsolutePath());
 				}
 			} else {
-				System.err.println("Usage: quantbcalc qtb_directory / it is not directory " + dir.getAbsolutePath());
+				System.err.println("Usage: quantbcalc qtb_directory" + dir.getAbsolutePath());
 			}
 		} else {
-			System.err.println("Usage: quantbcalc qtb_directory / no parameters");
+			System.err.println("Usage: quantbcalc qtb_directory");
 		}
 
+	}
+	/**
+	 * Log a random forecast record
+	 * @param forecast
+	 * @param logStream
+	 */
+	private static void logRandomForecast(ForecastUIAdapter forecast, PrintWriter logStream) {
+		BigDecimal all=forecast.getMedicines().get(0).getResults().get(0).getAllAvailable();
+		BigDecimal consOld=forecast.getMedicines().get(0).getResults().get(0).getConsOld();
+		BigDecimal consNew=forecast.getMedicines().get(0).getResults().get(0).getConsNew();
+		BigDecimal disp=forecast.getMedicines().get(0).getResults().get(0).getDispensing();
+		BigDecimal miss=forecast.getMedicines().get(0).getResults().get(0).getMissing();
+		Long expired=forecast.getMedicines().get(0).getResults().get(0).getExpired();
+		int year=forecast.getMedicines().get(0).getResults().get(0).getMonth().getYear();
+		int month=forecast.getMedicines().get(0).getResults().get(0).getMonth().getMonth();
+		
 	}
 
 	/**

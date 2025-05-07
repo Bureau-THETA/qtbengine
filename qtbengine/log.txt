@@ -1,0 +1,11 @@
+Processing Fictitia_PLANNED.qtb
+processed
+##### Heap utilization statistics [MB] #####
+Used Memory:191
+Free Memory:130
+Total Memory:322
+Max Memory:4032
+Elapsed 186 sec
+Total elapsed 186 sec
+Processed 1 forecasts
+Average calculation time is 186 sec
