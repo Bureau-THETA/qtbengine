@@ -53,93 +53,84 @@
 			  <scope>runtime</scope>
 			</dependency>
 	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.6.1</version>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.jvnet.jaxb</groupId>
-				<artifactId>jaxb-maven-plugin</artifactId>
-				<version>4.0.0</version>
-				<!-- <groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.15.3</version> -->
-				<executions>
-					<execution>
-						<id>1</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>2</id>
-						<phase>test</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<schemaDirectory>src/main/resources</schemaDirectory>
-					<generateDirectory>src/main/java</generateDirectory>
-					<includeSchemas>
-						<includeSchema>DataTypes.xsd</includeSchema>
-						<includeSchema>Forecast.xsd</includeSchema>
-					</includeSchemas>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
-				<configuration>
-					<source>21</source>
-					<target>21</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>org.stoptb.quantbcalc.Calculator</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
-				<configuration>
-				<includes>
-					<include>**/*.java</include>
-				</includes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+<build>
+    <plugins>
+        <!-- JAXB Plugin: Generates Java sources from XSD schemas -->
+        <plugin>
+            <groupId>org.jvnet.jaxb</groupId>
+            <artifactId>jaxb-maven-plugin</artifactId>
+            <version>4.0.0</version>
+            <executions>
+                <execution>
+                    <id>generate-sources</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>test</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <schemaDirectory>src/main/resources</schemaDirectory>
+                <generateDirectory>src/main/java</generateDirectory>
+                <includeSchemas>
+                    <includeSchema>DataTypes.xsd</includeSchema>
+                    <includeSchema>Forecast.xsd</includeSchema>
+                </includeSchemas>
+            </configuration>
+        </plugin>
+
+        <!-- Compiler Plugin: Sets Java version -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.13.0</version>
+            <configuration>
+                <source>21</source>
+                <target>21</target>
+            </configuration>
+        </plugin>
+
+        <!-- Surefire Plugin: Runs Java tests -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+            <configuration>
+                <includes>
+                    <include>**/*.java</include>
+                </includes>
+            </configuration>
+        </plugin>
+
+        <!-- Shade Plugin: Packages everything into a single executable JAR -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.5.0</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <transformers>
+                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <mainClass>org.theta.Example</mainClass>
+                    </transformer>
+                </transformers>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 </project>

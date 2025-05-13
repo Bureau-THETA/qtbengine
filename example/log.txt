@@ -1,11 +1,265 @@
 Processing Fictitia_PLANNED.qtb
 processed
-##### Heap utilization statistics [MB] #####
-Used Memory:152
-Free Memory:150
-Total Memory:304
-Max Memory:4032
-Elapsed 2 sec
-Total elapsed 2 sec
+<performance>
+  ##### Heap utilization statistics [MB] #####
+  Used Memory:88
+  Free Memory:163
+  Total Memory:252
+  Max Memory:4032
+  Elapsed 1 sec
+</performance>
+<medicine>
+    name=Bedaquiline
+    abbrevName=Bdq(100)
+    strength=100mg
+    dosage=
+  <day of the forecast>
+    year=2022
+    month=4
+    fromDay=28
+    toDay=28
+    oldCases=0.00
+    newCases=0.00
+    consOld=0.00
+    consNew=0.00
+    missing=0
+  </day of the forecast>
+  <day of the forecast>
+    year=2024
+    month=6
+    fromDay=25
+    toDay=25
+    oldCases=0.00
+    newCases=0.00
+    consOld=0.00
+    consNew=0.00
+    missing=0
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Clofazimine
+    abbrevName=Cfz(100)
+    strength=100mg
+    dosage=
+  <day of the forecast>
+    year=2023
+    month=2
+    fromDay=10
+    toDay=10
+    oldCases=136.00
+    newCases=1040.00
+    consOld=129.20
+    consNew=988.00
+    missing=0
+  </day of the forecast>
+  <day of the forecast>
+    year=2023
+    month=5
+    fromDay=4
+    toDay=4
+    oldCases=70.00
+    newCases=1250.00
+    consOld=66.50
+    consNew=1187.50
+    missing=0
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Cycloserine
+    abbrevName=Cs(250)
+    strength=250mg
+    dosage=
+  <day of the forecast>
+    year=2023
+    month=4
+    fromDay=16
+    toDay=16
+    oldCases=92.00
+    newCases=800.00
+    consOld=262.20
+    consNew=2280.00
+    missing=2542.20
+  </day of the forecast>
+  <day of the forecast>
+    year=2023
+    month=0
+    fromDay=7
+    toDay=7
+    oldCases=152.00
+    newCases=560.00
+    consOld=433.20
+    consNew=1596.00
+    missing=0
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Ethambutol
+    abbrevName=E(400)
+    strength=400mg
+    dosage=
+  <day of the forecast>
+    year=2024
+    month=11
+    fromDay=29
+    toDay=29
+    oldCases=0.00
+    newCases=500.00
+    consOld=0.00
+    consNew=1425.00
+    missing=1425.00
+  </day of the forecast>
+  <day of the forecast>
+    year=2022
+    month=11
+    fromDay=29
+    toDay=29
+    oldCases=10.00
+    newCases=270.00
+    consOld=28.50
+    consNew=769.50
+    missing=0
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Ethionamide
+    abbrevName=Eto(250)
+    strength=250mg
+    dosage=
+  <day of the forecast>
+    year=2022
+    month=8
+    fromDay=28
+    toDay=28
+    oldCases=0.00
+    newCases=150.00
+    consOld=0.00
+    consNew=427.50
+    missing=0
+  </day of the forecast>
+  <day of the forecast>
+    year=2024
+    month=1
+    fromDay=22
+    toDay=22
+    oldCases=0.00
+    newCases=220.00
+    consOld=0.00
+    consNew=627.00
+    missing=627.00
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Isoniazid
+    abbrevName=H(300)
+    strength=300mg
+    dosage=
+  <day of the forecast>
+    year=2024
+    month=2
+    fromDay=30
+    toDay=30
+    oldCases=0.00
+    newCases=230.00
+    consOld=0.00
+    consNew=655.50
+    missing=655.50
+  </day of the forecast>
+  <day of the forecast>
+    year=2023
+    month=7
+    fromDay=25
+    toDay=25
+    oldCases=0.00
+    newCases=200.00
+    consOld=0.00
+    consNew=570.00
+    missing=570.00
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Levofloxacin
+    abbrevName=Lfx(250)
+    strength=250mg
+    dosage=
+  <day of the forecast>
+    year=2024
+    month=3
+    fromDay=17
+    toDay=17
+    oldCases=0.00
+    newCases=1600.00
+    consOld=0.00
+    consNew=6080.00
+    missing=6080.00
+  </day of the forecast>
+  <day of the forecast>
+    year=2022
+    month=8
+    fromDay=7
+    toDay=7
+    oldCases=224.00
+    newCases=500.00
+    consOld=851.20
+    consNew=1900.00
+    missing=0
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Linezolid
+    abbrevName=Lzd(600)
+    strength=600mg
+    dosage=
+  <day of the forecast>
+    year=2023
+    month=4
+    fromDay=1
+    toDay=1
+    oldCases=92.00
+    newCases=800.00
+    consOld=87.40
+    consNew=760.00
+    missing=847.40
+  </day of the forecast>
+  <day of the forecast>
+    year=2024
+    month=9
+    fromDay=10
+    toDay=10
+    oldCases=0.00
+    newCases=1280.00
+    consOld=0.00
+    consNew=1216.00
+    missing=1216.00
+  </day of the forecast>
+</medicine>
+<medicine>
+    name=Pyrazinamide
+    abbrevName=Z(400)
+    strength=400mg
+    dosage=
+  <day of the forecast>
+    year=2023
+    month=0
+    fromDay=6
+    toDay=6
+    oldCases=10.00
+    newCases=310.00
+    consOld=38.00
+    consNew=1178.00
+    missing=0
+  </day of the forecast>
+  <day of the forecast>
+    year=2023
+    month=0
+    fromDay=24
+    toDay=24
+    oldCases=0.00
+    newCases=310.00
+    consOld=0.00
+    consNew=1178.00
+    missing=0
+  </day of the forecast>
+</medicine>
+Total elapsed 1 sec
 Processed 1 forecasts
-Average calculation time is 2 sec
+Average calculation time is 1 sec

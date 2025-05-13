@@ -11,22 +11,13 @@ Click the button below to download the latest release as a ZIP file:
 [![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge)](https://github.com/Bureau-THETA/qtbengine/archive/refs/heads/main.zip)
 
 ## Usage
-To integrate QTBEngine into your system:
-1. Ensure compatibility with your healthcare information infrastructure.
-2. Utilize the provided API or modules for tailored forecasting.
-3. Configure settings to align with local practices and priorities.
+??????????????????????????????????????????????????????/
 
 ## Example
 
-### Bash Example
-For Unix-based systems, use the following command:
-```bash
-./qtbengine --input=data_source.json --forecast=90-days --output=report.csv
-
-### Windows Example
-For Unix-based systems, use the following command:
-```bash
-./qtbengine --input=data_source.json --forecast=90-days --output=report.csv
+```bash and Windows
+./run_test.cmd
+```
 
 This final version ensures clarity, usability, and professionalism while emphasizing the library's mission and use cases. Let me know if you’d like further refinements!
 
