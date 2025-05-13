@@ -41,6 +41,7 @@ import org.msh.quantb.services.io.ForecastingRegimenUIAdapter;
 import org.msh.quantb.services.io.KitDefinitionUIAdapter;
 import org.msh.quantb.services.io.MedicineUIAdapter;
 import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.UnmarshalException;
 
 /**
  * This class implements main method to check performance load, validate,
@@ -77,127 +78,11 @@ public class Calculator {
 		return result;
 	}
 
-	/**
-	 * Print diagnostic data
-	 * 
-	 * @param prevTime  when printDiag has been called before.
-	 * @param logStream
-	 */
-	private static Date printDiag(Date prevTime, PrintWriter logStream) {
-		int mb = 1024 * 1024;
 
-		// Getting the runtime reference from system
-		Runtime runtime = Runtime.getRuntime();
 
-		log("##### Heap utilization statistics [MB] #####", logStream);
-
-		// Print used memory
-		log("Used Memory:" + (runtime.totalMemory() - runtime.freeMemory()) / mb, logStream);
-
-		// Print free memory
-		log("Free Memory:" + runtime.freeMemory() / mb, logStream);
-
-		// Print total available memory
-		log("Total Memory:" + runtime.totalMemory() / mb, logStream);
-
-		// Print Maximum available memory
-		log("Max Memory:" + runtime.maxMemory() / mb, logStream);
-
-		// Print time elapsed
-		Date ret = new Date();
-		log("Elapsed " + ((ret.getTime() - prevTime.getTime()) / 1000) + " sec", logStream);
-		return ret;
-	}
 
 	/**
-	 * Main method to run from command line. Mainly for performance assessment
-	 * purpose
-	 * 
-	 * @param args
-	 * @throws IOException
-	 */
-	public static void main(String[] args) throws IOException {
-		if (args.length == 1) {
-			File dir = new File(args[0]);
-			if (dir.isDirectory()) {
-				File[] directoryListing = dir.listFiles();
-				if (directoryListing != null && directoryListing.length>0) {
-					System.out.println("Press Enter to continue...");
-					System.in.read();
-					Date prevTime = new Date();
-					Date start = new Date();
-					int count = 0;
-					File log = new File("log.txt");
-					PrintWriter logStream = new PrintWriter(log);
-					for (File child : directoryListing) {
-						if (child.getName().toUpperCase().endsWith(".QTB")) {
-							try {
-								FileInputStream stream = new FileInputStream(child);
-								log("Processing " + child.getName(), logStream);
-								ForecastUIAdapter forecast = Calculator.instanceOf().load(stream, child.getName());
-								ForecastResult result=Calculator.instanceOf().calculate(forecast);
-								//logForecast(result,logStream);
-								log("processed", logStream);
-								prevTime = printDiag(prevTime, logStream);
-							} catch (FileNotFoundException e) {
-								e.printStackTrace();
-							} catch (JAXBException e) {
-								e.printStackTrace();
-							}
-						}
-						count++;
-					}
-					Date endTime = new Date();
-					log("Total elapsed " + ((endTime.getTime() - start.getTime()) / 1000) + " sec", logStream);
-					log("Processed " + count + " forecasts", logStream);
-					log("Average calculation time is " + ((endTime.getTime() - start.getTime()) / 1000) / count
-							+ " sec", logStream);
-					logStream.flush();
-					logStream.close();
-				} else {
-					System.err.println(
-							"Usage: quantbcalc qtb_directory" + dir.getAbsolutePath());
-				}
-			} else {
-				System.err.println("Usage: quantbcalc qtb_directory" + dir.getAbsolutePath());
-			}
-		} else {
-			System.err.println("Usage: quantbcalc qtb_directory");
-		}
-
-	}
-	/**
-	 * Log a random forecast record
-	 * @param forecast
-	 * @param logStream
-	 */
-	private static void logRandomForecast(ForecastUIAdapter forecast, PrintWriter logStream) {
-		BigDecimal all=forecast.getMedicines().get(0).getResults().get(0).getAllAvailable();
-		BigDecimal consOld=forecast.getMedicines().get(0).getResults().get(0).getConsOld();
-		BigDecimal consNew=forecast.getMedicines().get(0).getResults().get(0).getConsNew();
-		BigDecimal disp=forecast.getMedicines().get(0).getResults().get(0).getDispensing();
-		BigDecimal miss=forecast.getMedicines().get(0).getResults().get(0).getMissing();
-		Long expired=forecast.getMedicines().get(0).getResults().get(0).getExpired();
-		int year=forecast.getMedicines().get(0).getResults().get(0).getMonth().getYear();
-		int month=forecast.getMedicines().get(0).getResults().get(0).getMonth().getMonth();
-		
-	}
-
-	/**
-	 * Log it to console and file
-	 * 
-	 * @param message
-	 * @param logStream
-	 */
-	private static void log(String message, PrintWriter logStream) {
-		System.out.println(message);
-		logStream.println(message);
-
-	}
-
-	/**
-	 * Load forecast from qtb xml stream
-	 * 
+	 * Adapter to load UI representation of the source forecast
 	 * @param qtbStream stream
 	 * @param name      name of the stream that should be assigned
 	 * @return
@@ -205,9 +90,24 @@ public class Calculator {
 	 * @throws IOException
 	 */
 	public ForecastUIAdapter load(InputStream qtbStream, String name) throws JAXBException, IOException {
+		Forecast fc = loadForecastFromStream(qtbStream, name);
+		return new ForecastUIAdapter(fc);
+	}
+	
+	/**
+	 * load forecast from the stream
+	 * @param qtbStream
+	 * @param name
+	 * @return
+	 * @throws UnmarshalException
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
+	public Forecast loadForecastFromStream(InputStream qtbStream, String name) 
+			throws UnmarshalException, JAXBException, IOException {
 		Forecast fc = ModelFactory.of("").readForecastingFromStream(qtbStream, name);
 		qtbStream.close();
-		return new ForecastUIAdapter(fc);
+		return fc;
 	}
 
 	/**
