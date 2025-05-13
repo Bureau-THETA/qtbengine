@@ -1,5 +1,5 @@
 # The Quantification Engine
-## Power Forecasting and Early Warning for Medicinal Products—Right Inside Your Health IT Stack
+## Predict, Prepare, Prevent.Trusted worldwide morbidity-based forecasting of medicinal products right inside your health IT stack
 ### 📌 Project Overview
 
 Our **open-sourced Java-based software library** empowers **public health agencies, global health organizations, academic institutions, health tech innovators**, and **pharmaceutical companies** with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
