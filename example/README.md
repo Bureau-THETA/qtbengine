@@ -1,5 +1,5 @@
-# QTBEngine
-## Predict, Prepare, Prevent.Trusted worldwide morbidity-based forecasting of medicinal products right inside your health IT stack
+# QTBEngine. Predict, Prepare, Prevent.
+## Trusted worldwide morbidity-based forecasting of medicinal products right inside your health IT stack
 
 ## Overview
 **QTBEngine** is the definitive open-source software library designed to empower health information systems with precise, validated forecasts of medicinal product needs. Driven by robust, data-backed morbidity models, it provides a powerful, fully customizable decision-support engine that adapts seamlessly to local practices and priorities.
