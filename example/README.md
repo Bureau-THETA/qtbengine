@@ -29,6 +29,7 @@ For Unix-based systems, use the following command:
 ./qtbengine --input=data_source.json --forecast=90-days --output=report.csv
 
 This final version ensures clarity, usability, and professionalism while emphasizing the library's mission and use cases. Let me know if you’d like further refinements!
+
 ## Contributions
 Public contributions via **pull requests are disabled**, but you are welcome to share feedback, report bugs, or suggest improvements through [GitHub Issues](https://github.com/YOUR-REPO-NAME/issues). The development team actively reviews submissions to enhance QTBEngine's functionality.
 
