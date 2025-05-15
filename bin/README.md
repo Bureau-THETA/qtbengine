@@ -24,7 +24,9 @@ Click the button below to download the latest release as a ZIP file:
 - **`log.txt`** - result of the basic example run
 - **`qtbengine-4.5.0.jar`** ready to use the qtbengine binary
 - **`run_test.cmd`** - executable to run the basic example. Make it executable for Linux
-[Download Basic Manual](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/basic_manual.pdf)
+
+📥 [Download Basic Manual](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/basic_manual.pdf)
+
 
 
 ## Contributions
