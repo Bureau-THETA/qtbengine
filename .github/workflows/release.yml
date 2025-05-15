@@ -1,0 +1,28 @@
+name: Auto Release Bin Folder
+
+on:
+  push:
+    branches:
+      - main  # Change this if needed
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Create ZIP of bin Folder
+        run: |
+          zip -r bin.zip bin
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: bin.zip
+          tag_name: latest
+          name: Auto-Generated Release
+          body: "This release includes the latest version of the bin folder."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
