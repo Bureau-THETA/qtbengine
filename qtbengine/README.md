@@ -18,13 +18,12 @@ Click the button below to download the latest release as a ZIP file.
 [Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
 
-## 📁 Project Structure
+## 📁 This folder contains the Java source code that implements morbidity-based forecasting logic.
 
 The `qtbengine` repository is organized to help you explore, understand, and use the library effectively:
 
-- **`bin/`** — Contains the ready-to-use library compiled under Java 21 and a basic example to quick start
-- **`doc/`** — Contains basic start-up and use cases guides
-- **`qtbengine/`** — The heart of the project. This folder contains the Java source code that implements morbidity-based forecasting logic.
+- **`src/`** — Source codes
+- **`pom.xml`** — Maven configuration. [Introduction to the POM – Maven](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)
 
 ## Contributions
 You are welcome to share feedback, report bugs, or suggest improvements through [Quantifiaction Engine Issues](https://github.com/Bureau-THETA/qtbengine/issues). The development team actively reviews issues to elimenate errors, and enhance the functionality.
