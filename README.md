@@ -1,10 +1,14 @@
-# The Quantification Engine. Predict, Prepare, Prevent.
+# The Quantification Engine. 
+## Predict. Prepare. Prevent.
 ## Trusted worldwide morbidity-based forecasting of medicinal products right inside your health IT stack
 ### 📌 Project Overview
 
-Our **open-sourced Java-based software library** empowers **public health agencies, global health organizations, academic institutions, health tech innovators**, and **pharmaceutical companies** with accurate, data-driven forecasts of future medicinal product needs using the **morbidity method**.
+The Quantification Engine is the definitive open-source software library for empowering health information systems with precise, validated forecasts of medicinal product needs, driven by robust, data-backed morbidity models. Built for pioneers in health digitization, the Quantification Engine delivers a powerful, fully customizable decision-support engine that adapts seamlessly to local practices and priorities.
 
-In use for many years across more than 60 countries, the library is designed to integrate seamlessly with **reported and estimated morbidity data**. It provides **transparent**, **scientifically robust projections** that are **fully customizable to local demand patterns**—helping optimize resource allocation, minimize stockouts, and ensure better preparedness for future health needs.
+The health and logistics records are sources of the input data. The output is a forecast for a period given:
+-	Stock on hand
+-	Stock dispensed
+-	Stockouts and expiration losses that may occur
 
 The result: **smarter decisions, stronger systems, and healthier populations**.
 
