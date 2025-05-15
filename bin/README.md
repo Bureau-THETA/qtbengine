@@ -13,9 +13,8 @@ The health and logistics records are sources of the input data. The output is a 
 -	Stockouts and expiration losses that may occur
 
 ### 🚀 Get Started
-Click the button below to download the latest release as a ZIP file:
-
-[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge)](https://github.com/Bureau-THETA/qtbengine/archive/refs/heads/main.zip)
+Click the button below to download the latest release as a ZIP file.
+[Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
 
 ## 📁 Folder contains the ready-to-use library compiled under Java 21 and a basic example to quick start

@@ -14,7 +14,7 @@ The health and logistics records are sources of the input data. The output is a 
 📥 [Download Use Cases right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/Use_Cases.pdf)
 
 ### 🚀 Get Started
-Click the button below to download the latest release as a ZIP file:
+Click the button below to download the latest release as a ZIP file.
 [Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
 
