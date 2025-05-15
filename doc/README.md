@@ -11,7 +11,7 @@ The health and logistics records are sources of the input data. The output is a 
 -	Stock dispensed
 -	Stock in orders
 -	Stockouts and expiration losses that may occur
-📥 [Download Use Cases right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/Use_Cases.pdf)
+
 
 ### 🚀 Get Started
 Click the button below to download the latest release as a ZIP file:
@@ -19,13 +19,11 @@ Click the button below to download the latest release as a ZIP file:
 [![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge)](https://github.com/Bureau-THETA/qtbengine/archive/refs/heads/main.zip)
 
 
-## 📁 Project Structure
+## 📁 Folder contains basic start-up and use cases guides
 
-The `qtbengine` repository is organized to help you explore, understand, and use the library effectively:
+- **`Quick_Start.pdf`** - How to start quickly using the binary and example provided. [Download binary and example right now](https://github.com/Bureau-THETA/qtbengine/raw/main/bin.zip)
 
-- **`bin/`** — Contains the ready-to-use library compiled under Java 21 and a basic example to quick start
-- **`doc/`** — Contains basic start-up and use cases guides
-- **`qtbengine/`** — The heart of the project. This folder contains the Java source code that implements morbidity-based forecasting logic.
+- **`Use_Cases.pdf`** - Scenarious of the usage after start
 
 ## Contributions
 You are welcome to share feedback, report bugs, or suggest improvements through [Quantifiaction Engine Issues](https://github.com/Bureau-THETA/qtbengine/issues). The development team actively reviews issues to elimenate errors, and enhance the functionality.
