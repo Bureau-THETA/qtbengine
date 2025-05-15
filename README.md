@@ -15,8 +15,7 @@ The health and logistics records are sources of the input data. The output is a 
 
 ### 🚀 Get Started
 Click the button below to download the latest release as a ZIP file:
-
-[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge)](https://github.com/Bureau-THETA/qtbengine/archive/refs/heads/main.zip)
+[Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
 
 ## 📁 Project Structure

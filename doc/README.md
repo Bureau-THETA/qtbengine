@@ -21,8 +21,7 @@ Click the button below to download the latest release as a ZIP file:
 
 ## 📁 Folder contains basic start-up and use cases guides
 
-- **`Quick_Start.pdf`** - How to start quickly using the binary and example provided. [Download binary and example](https://github.com/Bureau-THETA/qtbengine/releases/latest/bin.zip)
-
+- **`Quick_Start.pdf`** - How to start quickly using the binary and example provided. [[Download bin.zip from the Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
 - **`Use_Cases.pdf`** - Scenarious of the usage after start
 
