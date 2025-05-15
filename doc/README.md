@@ -15,13 +15,14 @@ The health and logistics records are sources of the input data. The output is a 
 
 ### 🚀 Get Started
 Click the button below to download the latest release as a ZIP file:
+[Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
-[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge)](https://github.com/Bureau-THETA/qtbengine/archive/refs/heads/main.zip)
 
 
 ## 📁 Folder contains basic start-up and use cases guides
 
-- **`Quick_Start.pdf`** - How to start quickly using the binary and example provided. [Download binary and example right now](https://github.com/Bureau-THETA/qtbengine/raw/main/bin.zip)
+- **`Quick_Start.pdf`** - How to start quickly using the binary and example provided. [Download binary and example](https://github.com/Bureau-THETA/qtbengine/releases/latest/bin.zip)
+
 
 - **`Use_Cases.pdf`** - Scenarious of the usage after start
 
