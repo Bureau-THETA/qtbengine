@@ -71,10 +71,10 @@ public class Example {
 					logStream.close();
 				} else {
 					System.err.println(
-							"Usage: quantbcalc qtb_directory" + dir.getAbsolutePath());
+							"Usage: quantbcalc qtb_directory, instead " + dir.getAbsolutePath());
 				}
 			} else {
-				System.err.println("Usage: quantbcalc qtb_directory" + dir.getAbsolutePath());
+				System.err.println("Usage: quantbcalc qtb_directory, instead " + dir.getAbsolutePath());
 			}
 		} else {
 			System.err.println("Usage: quantbcalc qtb_directory");
