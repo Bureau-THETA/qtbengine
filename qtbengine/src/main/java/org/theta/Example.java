@@ -5,18 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
-import java.util.Random;
-
 import org.msh.quantb.model.forecast.Forecast;
-import org.msh.quantb.model.forecast.ForecastingMedicine;
-import org.msh.quantb.services.io.ForecastUIAdapter;
 import org.stoptb.quantbcalc.Calculator;
-import org.stoptb.quantbcalc.ForecastResult;
-import org.theta.dto.BasicResult;
+import org.theta.model.ForecastingMedicineConverter;
 import org.theta.services.BasicEngine;
 
 import jakarta.xml.bind.JAXBException;
@@ -53,7 +45,7 @@ public class Example {
 								forecast = BasicEngine.calculateDailyForecast(forecast);
 								log("processed", logStream);
 								prevTime = printDiag(prevTime, logStream);
-								logResults(forecast, 2,3,logStream);
+								logResults(forecast, 2,logStream);
 							} catch (FileNotFoundException e) {
 								e.printStackTrace();
 							} catch (JAXBException e) {
@@ -83,53 +75,28 @@ public class Example {
 	}
 
 	/**
-	 * Output random lines from forecasting results to log file
+	 * Output random lines from forecasting results to result.xml file
 	 * For example only
 	 * @param forecast
 	 * @param linesPerMedicine
 	 * @param logStream 
-	 * @param j 
 	 */
-	private static void logResults(Forecast forecast, int linesPerMedicine, int j, PrintWriter logStream) {
-		int lines=forecast.getMedicines().get(0).getResults().size();
-		for(ForecastingMedicine fm : forecast.getMedicines()) {
-			log("<medicine>", logStream);
-			logObject(fm.getMedicine(), logStream);
-			for(int i=0; i<linesPerMedicine;i++) {
-				Random random = new Random();
-				int randomLine = random.nextInt(lines-1); // Generates a number from 0 to lines-1 (inclusive)
-				log("  <day of the forecast>", logStream);
-				logObject(fm.getResults().get(randomLine).getMonth(), logStream);
-				logObject(fm.getResults().get(randomLine),logStream);
-				log("  </day of the forecast>", logStream);
-			}
-			log("</medicine>", logStream);
+	private static void logResults(Forecast forecast, int linesPerMedicine,  PrintWriter logStream) {
+		try {
+			// Convert list to XML byte array
+	        byte[] xmlBytes;
+			xmlBytes = ForecastingMedicineConverter.convertToXmlBytes(forecast.getMedicines());
+			// Store in result.xml
+	        ForecastingMedicineConverter.storeXmlFile(xmlBytes, "result.xml");
+	        System.out.println("XML file saved successfully.");
+		} catch (JAXBException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
+        
 	}
 
-	/**
-	 * log an object 
-	 * @param 
-	 * @param logStream 
-	 */
-	private static void logObject(Object obj, PrintWriter logStream) {
-		obj.getClass().getDeclaredFields();
-		Field[] fields = obj.getClass().getDeclaredFields();
-		for (Field field : fields) {
-			field.setAccessible(true); // Allow access to private fields
-			try {
-				if (field.getType().isPrimitive() 
-						|| field.getType().equals(String.class) 
-						|| field.getType().equals(BigDecimal.class)) { // Check if primitive, String, or BigDecimal
-					log("    "+field.getName()+"="+ field.get(obj),logStream);
-				}
-			} catch (IllegalAccessException e) {
-				System.out.println(field.getName() + " - Cannot access value");
-			}
-		}
-
-	}
 
 	/**
 	 * Log it to console and file

@@ -20,7 +20,6 @@ Click the button below to download the latest release as a ZIP file.
 ## 📁 Folder contains the ready-to-use library compiled under Java 21 and a basic example to quick start
 
 - **`test_data/`** - folder contains test data for a basic example 
-- **`log.txt`** - result of the basic example run
 - **`qtbengine-4.5.0.jar`** ready to use the qtbengine binary
 - **`run_test.cmd`** - executable to run the basic example. Make it executable for Linux
 
