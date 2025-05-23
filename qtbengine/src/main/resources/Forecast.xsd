@@ -14,15 +14,14 @@
 	<complexType name="Forecast">
 		<annotation>
 			<documentation>
-				Represent forecast itself.
+				Input parameters for a Medicinal Products Forecast
 			</documentation>
 		</annotation>
 		<sequence>
 			<element name="name" type="string">
 				<annotation>
 					<documentation>
-						Name of forecast to to distinguish one object
-						from another.
+						Meaningful name of the input parameters, e.g. District112_20250403 
 					</documentation>
 				</annotation>
 			</element>

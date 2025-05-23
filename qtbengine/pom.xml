@@ -79,10 +79,6 @@
             <configuration>
                 <schemaDirectory>src/main/resources</schemaDirectory>
                 <generateDirectory>src/main/java</generateDirectory>
-                <includeSchemas>
-                    <includeSchema>DataTypes.xsd</includeSchema>
-                    <includeSchema>Forecast.xsd</includeSchema>
-                </includeSchemas>
             </configuration>
         </plugin>
 

@@ -21,7 +21,7 @@ import org.msh.quantb.model.gen.RegimenTypesEnum;
 
 /**
  * 
- * 				Represent forecast itself.
+ * 				Input parameters for a Medicinal Products Forecast
  * 			
  * 
  * <p>Java class for Forecast complex type.
