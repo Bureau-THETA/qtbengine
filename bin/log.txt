@@ -2,10 +2,10 @@ Processing Fictitia_PLANNED.qtb
 processed
 <performance>
   ##### Heap utilization statistics [MB] #####
-  Used Memory:81
-  Free Memory:169
-  Total Memory:252
-  Max Memory:4032
+  Used Memory: 86
+  Free Memory: 165
+  Total Memory: 252
+  Max Memory: 4032
   Elapsed 1 sec
 </performance>
 Total elapsed 2 sec
