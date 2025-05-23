@@ -4,6 +4,7 @@ import org.msh.quantb.model.forecast.Forecast;
 import org.msh.quantb.model.mvp.ModelFactory;
 import org.msh.quantb.services.calc.ForecastingCalculation;
 
+
 /**
  * The basic qtbengine features:
  * <ul>

@@ -1,13 +1,18 @@
 package org.theta.model;
 
-import jakarta.xml.bind.*; // Import Jakarta XML Binding instead of Javax
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 import org.msh.quantb.model.forecast.ForecastingMedicine;
+import org.theta.services.ForecastingMedicineWrapper;
+
+// Import Jakarta XML Binding instead of Javax
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+
 
 /**
  * This class handles conversion of a list of ForecastingMedicine objects into

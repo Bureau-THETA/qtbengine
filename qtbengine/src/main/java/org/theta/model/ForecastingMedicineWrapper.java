@@ -11,7 +11,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  * Wrapper class for handling multiple ForecastingMedicine objects in JAXB processing.
  */
 @XmlRootElement
-class ForecastingMedicineWrapper {
+public class ForecastingMedicineWrapper {
     private List<ForecastingMedicine> medicines;
 
     @XmlElement(name = "ForecastingMedicine")
