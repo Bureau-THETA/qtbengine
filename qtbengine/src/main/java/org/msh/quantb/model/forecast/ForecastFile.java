@@ -14,6 +14,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * A descriptor for qtb file for QuanTB
+ * 
  * <p>Java class for ForecastFile complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

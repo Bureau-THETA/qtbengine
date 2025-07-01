@@ -15,6 +15,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Last five files loaded to QuanTB
+ * 
  * <p>Java class for ForecastLast5 complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

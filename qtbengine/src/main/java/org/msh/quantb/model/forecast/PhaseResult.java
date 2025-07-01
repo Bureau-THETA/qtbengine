@@ -15,7 +15,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * This is a regimen result for one phase
+ * Prospected cases in a phase of a regimen.
  * 
  * <p>Java class for PhaseResult complex type.
  * 

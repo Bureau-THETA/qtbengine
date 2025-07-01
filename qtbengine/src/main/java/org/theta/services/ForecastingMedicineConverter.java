@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.msh.quantb.model.forecast.ForecastingMedicine;
+import org.msh.quantb.model.forecast.ForecastingRegimen;
 import org.theta.model.ForecastingResultsWrapper;
 
 // Import Jakarta XML Binding instead of Javax
@@ -28,15 +29,16 @@ public class ForecastingMedicineConverter {
      * @return A byte array containing the XML representation.
      * @throws JAXBException If an error occurs during XML processing.
      */
-    public static byte[] convertToXmlBytes(List<ForecastingMedicine> medicines) throws JAXBException {
+    public static byte[] convertToXmlBytes(List<ForecastingMedicine> medicines, List<ForecastingRegimen> regimes) throws JAXBException {
         // Create JAXB context for ForecastingMedicineWrapper class
         JAXBContext context = JAXBContext.newInstance(ForecastingResultsWrapper.class);
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE); // Pretty-print XML
-
-        // Wrap list in a container class
+        
+        // Wrap lists in a container class
         ForecastingResultsWrapper wrapper = new ForecastingResultsWrapper();
         wrapper.setMedicines(medicines);
+        wrapper.setRegimes(regimes);
 
         // Convert to byte array
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

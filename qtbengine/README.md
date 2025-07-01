@@ -11,11 +11,12 @@ The health and logistics records are sources of the input data. The output is a 
 -	Stock dispensed
 -	Stock in orders
 -	Stockouts and expiration losses that may occur
-📥 [Download Use Cases right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/Use_Cases.pdf)
+📥 [Download Usage Guide right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/QuantificationEngine.pdf)
 
 ### 🚀 Get Started
 Click the button below to download the latest release as a ZIP file.
 [Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
+📥 [Download Quick Start Guide right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/Quick_Start.pdf)
 
 
 ## 📁 This folder contains the Java source code that implements morbidity-based forecasting logic.

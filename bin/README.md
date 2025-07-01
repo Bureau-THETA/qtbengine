@@ -20,10 +20,12 @@ Click the button below to download the latest release as a ZIP file.
 ## 📁 Folder contains the ready-to-use library compiled under Java 21 and a basic example to quick start
 
 - **`test_data/`** - folder contains test data for a basic example 
+- ** `log.txt`** - log file example
 - **`qtbengine-4.5.0.jar`** ready to use the qtbengine binary
+- **`result.xml`** result of the forecasting example
 - **`run_test.cmd`** - executable to run the basic example. Make it executable for Linux
 
-📥 [Download Basic Manual right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/Quick_Start.pdf)
+📥 [Download Starting Manual right now!](https://github.com/Bureau-THETA/qtbengine/raw/main/doc/Quick_Start.pdf)
 
 
 

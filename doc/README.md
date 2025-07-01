@@ -23,7 +23,7 @@ Click the button below to download the latest release as a ZIP file:
 
 - **`Quick_Start.pdf`** - How to start quickly using the binary and example provided. [[Download bin.zip from the Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
-- **`Use_Cases.pdf`** - Scenarious of the usage after start
+- **`QuantificationEngine.pdf`** - The guide of the usage after the start
 
 ## Contributions
 You are welcome to share feedback, report bugs, or suggest improvements through [Quantifiaction Engine Issues](https://github.com/Bureau-THETA/qtbengine/issues). The development team actively reviews issues to elimenate errors, and enhance the functionality.

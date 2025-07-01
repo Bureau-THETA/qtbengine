@@ -817,5 +817,21 @@ public class ForecastingCalculation {
 		}
 		return ret;
 	}
+	/**
+	 * Regimen results should fit forecasting period.
+	 */
+	public void shrinkRegimenResults() {
+		LocalDate fcStart = ForecastUIAdapter.calcFirstDate(getForecastUI().getReferenceDate());
+		for(ForecastingRegimen fr :  getForecastUI().getForecastObj().getRegimes()) {
+			List<ForecastingRegimenResult> frLis = fr.getResults().stream()
+				.filter(item->LocalDate.of(item.getMonth().getYear(),
+					item.getMonth().getMonth()+1,
+					item.getFromDay()).isAfter(fcStart.minusDays(1)))
+				.toList();
+			fr.getResults().clear();
+			fr.getResults().addAll(frLis);
+		}
+		
+	}
 
 }

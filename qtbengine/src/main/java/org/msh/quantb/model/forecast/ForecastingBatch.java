@@ -17,6 +17,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Medicines batch and forecasting result for it. A medicinal product in stock consists of batches. A batch is a specified quantity of the same medicinal product that shares the same expiration date.
+ * 
  * <p>Java class for ForecastingBatch complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

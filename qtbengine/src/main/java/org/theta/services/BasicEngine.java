@@ -25,6 +25,7 @@ public class BasicEngine {
 		calc.adjustResults();
 		calc.calcMedicines();
 		calc.calcMedicinesResults();
+		calc.shrinkRegimenResults();
 		return forecast;
 	}
 

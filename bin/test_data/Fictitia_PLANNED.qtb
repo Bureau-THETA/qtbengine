@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:forecast xmlns:ns2="http://www.msh.org/quantb/model/forecast">
-    <ns2:name>Fictitia_PLANNED_V4.6.qtb</ns2:name>
-    <ns2:referenceDate>2022-03-31</ns2:referenceDate>
-    <ns2:iniDate>2022-09-01</ns2:iniDate>
-    <ns2:endDate>2024-12-31</ns2:endDate>
+    <ns2:name>Fictitia_PLANNED.qtb</ns2:name>
+    <ns2:referenceDate>2025-03-31</ns2:referenceDate>
+    <ns2:iniDate>2025-06-01</ns2:iniDate>
+    <ns2:endDate>2025-08-31</ns2:endDate>
     <ns2:bufferStockTime>0</ns2:bufferStockTime>
     <ns2:minStock>6</ns2:minStock>
     <ns2:maxStock>12</ns2:maxStock>
-    <ns2:leadTime>5</ns2:leadTime>
-    <ns2:recordingDate>2022-07-11+08:00</ns2:recordingDate>
+    <ns2:leadTime>2</ns2:leadTime>
+    <ns2:recordingDate>2025-06-10+03:00</ns2:recordingDate>
     <ns2:comment>Original plan</ns2:comment>
     <ns2:medicines>
         <ns2:medicine>
@@ -32,9 +32,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2025-03-31</ns2:expired>
+            <ns2:expired>2026-03-31</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2025</ns2:Year>
+                <ns2:Year>2026</ns2:Year>
                 <ns2:Month>2</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>120400</ns2:quantity>
@@ -47,9 +47,9 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:orders>
-            <ns2:arrived>2022-04-30</ns2:arrived>
+            <ns2:arrived>2025-04-30</ns2:arrived>
             <ns2:arrivalDate>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>3</ns2:Month>
             </ns2:arrivalDate>
             <ns2:batch>
@@ -100,9 +100,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2025-03-31</ns2:expired>
+            <ns2:expired>2027-03-31</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2025</ns2:Year>
+                <ns2:Year>2027</ns2:Year>
                 <ns2:Month>2</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>250000</ns2:quantity>
@@ -114,9 +114,9 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:orders>
-            <ns2:arrived>2022-10-31</ns2:arrived>
+            <ns2:arrived>2025-10-31</ns2:arrived>
             <ns2:arrivalDate>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>9</ns2:Month>
             </ns2:arrivalDate>
             <ns2:batch>
@@ -167,9 +167,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-03-31</ns2:expired>
+            <ns2:expired>2026-03-21</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
+                <ns2:Year>2026</ns2:Year>
                 <ns2:Month>2</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>390000</ns2:quantity>
@@ -181,10 +181,10 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-02-28</ns2:expired>
+            <ns2:expired>2025-12-16</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>1</ns2:Month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>11</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>100000</ns2:quantity>
             <ns2:quantityAvailable>0</ns2:quantityAvailable>
@@ -195,15 +195,15 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:orders>
-            <ns2:arrived>2022-11-30</ns2:arrived>
+            <ns2:arrived>2025-11-30</ns2:arrived>
             <ns2:arrivalDate>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>10</ns2:Month>
             </ns2:arrivalDate>
             <ns2:batch>
-                <ns2:expired>2024-12-31</ns2:expired>
+                <ns2:expired>2025-12-31</ns2:expired>
                 <ns2:expiryDate>
-                    <ns2:Year>2024</ns2:Year>
+                    <ns2:Year>2025</ns2:Year>
                     <ns2:Month>11</ns2:Month>
                 </ns2:expiryDate>
                 <ns2:quantity>100000</ns2:quantity>
@@ -246,9 +246,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-03-31</ns2:expired>
+            <ns2:expired>2026-03-19</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
+                <ns2:Year>2026</ns2:Year>
                 <ns2:Month>2</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>200300</ns2:quantity>
@@ -290,10 +290,10 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-02-28</ns2:expired>
+            <ns2:expired>2025-10-14</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>1</ns2:Month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>9</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>125500</ns2:quantity>
             <ns2:quantityAvailable>0</ns2:quantityAvailable>
@@ -334,9 +334,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-06-30</ns2:expired>
+            <ns2:expired>2025-06-30</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>5</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>121500</ns2:quantity>
@@ -380,9 +380,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-10-31</ns2:expired>
+            <ns2:expired>2027-10-02</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
+                <ns2:Year>2027</ns2:Year>
                 <ns2:Month>9</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>808000</ns2:quantity>
@@ -394,9 +394,9 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:batchesToExpire>
-            <ns2:expired>2022-09-30</ns2:expired>
+            <ns2:expired>2025-09-30</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>8</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>480000</ns2:quantity>
@@ -408,9 +408,9 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:orders>
-            <ns2:arrived>2022-09-15</ns2:arrived>
+            <ns2:arrived>2025-09-15</ns2:arrived>
             <ns2:arrivalDate>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>8</ns2:Month>
             </ns2:arrivalDate>
             <ns2:batch>
@@ -461,9 +461,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2023-11-30</ns2:expired>
+            <ns2:expired>2026-11-30</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2023</ns2:Year>
+                <ns2:Year>2026</ns2:Year>
                 <ns2:Month>10</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>90000</ns2:quantity>
@@ -475,9 +475,9 @@
             <ns2:gdf>false</ns2:gdf>
         </ns2:batchesToExpire>
         <ns2:batchesToExpire>
-            <ns2:expired>2025-02-28</ns2:expired>
+            <ns2:expired>2027-02-24</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2025</ns2:Year>
+                <ns2:Year>2027</ns2:Year>
                 <ns2:Month>1</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>74000</ns2:quantity>
@@ -519,9 +519,9 @@
         <ns2:unitPrice>0</ns2:unitPrice>
         <ns2:stockOnHand>0</ns2:stockOnHand>
         <ns2:batchesToExpire>
-            <ns2:expired>2024-10-31</ns2:expired>
+            <ns2:expired>2026-10-16</ns2:expired>
             <ns2:expiryDate>
-                <ns2:Year>2024</ns2:Year>
+                <ns2:Year>2026</ns2:Year>
                 <ns2:Month>9</ns2:Month>
             </ns2:expiryDate>
             <ns2:quantity>250000</ns2:quantity>
@@ -897,311 +897,115 @@
             <duration>0</duration>
         </ns2:regimen>
         <ns2:casesOnTreatment>
-            <ns2:iQuantity>0</ns2:iQuantity>
+            <ns2:iQuantity>12</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>4</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
-            <ns2:iQuantity>0</ns2:iQuantity>
+            <ns2:iQuantity>20</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>5</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
-            <ns2:iQuantity>0</ns2:iQuantity>
+            <ns2:iQuantity>11</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>6</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
-            <ns2:iQuantity>0</ns2:iQuantity>
+            <ns2:iQuantity>23</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>7</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
-            <ns2:iQuantity>0</ns2:iQuantity>
+            <ns2:iQuantity>1</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>8</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>18</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>9</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
             <ns2:iQuantity>10</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>10</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
+            <ns2:iQuantity>9</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2024</ns2:Year>
                 <ns2:Month>11</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
+            <ns2:iQuantity>13</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>0</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>1</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>1</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>2</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>2</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:newCases>
             <ns2:iQuantity>10</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>0</ns2:Month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>3</ns2:Month>
             </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
+        </ns2:newCases>
+        <ns2:newCases>
             <ns2:iQuantity>10</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>4</ns2:Month>
             </ns2:month>
         </ns2:newCases>
         <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
+            <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>5</ns2:Month>
             </ns2:month>
         </ns2:newCases>
         <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
+            <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>6</ns2:Month>
             </ns2:month>
         </ns2:newCases>
         <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
+            <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2022</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>30</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>11</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>0</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>4</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>5</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>6</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>40</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>11</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>0</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>4</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>5</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>6</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>11</ns2:Month>
             </ns2:month>
         </ns2:newCases>
         <ns2:excludeNewCases>false</ns2:excludeNewCases>
@@ -1503,358 +1307,162 @@
         <ns2:casesOnTreatment>
             <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2020</ns2:Year>
+                <ns2:Year>2023</ns2:Year>
                 <ns2:Month>9</ns2:Month>
             </ns2:month>
         </ns2:casesOnTreatment>
         <ns2:casesOnTreatment>
+            <ns2:iQuantity>10</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2023</ns2:Year>
+                <ns2:Month>10</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>9</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2023</ns2:Year>
+                <ns2:Month>11</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>7</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>0</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>18</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>1</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>17</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>2</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>16</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>3</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>1</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>4</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>16</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>5</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>28</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>6</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>3</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>7</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>21</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>8</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>1</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>9</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>2</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>10</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>3</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2024</ns2:Year>
+                <ns2:Month>11</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>19</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>0</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>13</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>1</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:casesOnTreatment>
+            <ns2:iQuantity>10</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>2</ns2:Month>
+            </ns2:month>
+        </ns2:casesOnTreatment>
+        <ns2:newCases>
+            <ns2:iQuantity>4</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>3</ns2:Month>
+            </ns2:month>
+        </ns2:newCases>
+        <ns2:newCases>
+            <ns2:iQuantity>12</ns2:iQuantity>
+            <ns2:month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>4</ns2:Month>
+            </ns2:month>
+        </ns2:newCases>
+        <ns2:newCases>
             <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2020</ns2:Year>
-                <ns2:Month>10</ns2:Month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>5</ns2:Month>
             </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
+        </ns2:newCases>
+        <ns2:newCases>
             <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2020</ns2:Year>
-                <ns2:Month>11</ns2:Month>
+                <ns2:Year>2025</ns2:Year>
+                <ns2:Month>6</ns2:Month>
             </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
+        </ns2:newCases>
+        <ns2:newCases>
             <ns2:iQuantity>0</ns2:iQuantity>
             <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>0</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>6</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>6</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>6</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>6</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>4</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>5</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>6</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
+                <ns2:Year>2025</ns2:Year>
                 <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>8</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>22</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>22</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>22</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2021</ns2:Year>
-                <ns2:Month>11</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>23</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>0</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>23</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:casesOnTreatment>
-            <ns2:iQuantity>24</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:casesOnTreatment>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>4</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>5</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>50</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>6</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2022</ns2:Year>
-                <ns2:Month>11</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>0</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>4</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>5</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>6</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>60</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2023</ns2:Year>
-                <ns2:Month>11</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>0</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>1</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>2</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>3</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>4</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>5</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>6</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>7</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>8</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>9</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>10</ns2:Month>
-            </ns2:month>
-        </ns2:newCases>
-        <ns2:newCases>
-            <ns2:iQuantity>80</ns2:iQuantity>
-            <ns2:month>
-                <ns2:Year>2024</ns2:Year>
-                <ns2:Month>11</ns2:Month>
             </ns2:month>
         </ns2:newCases>
         <ns2:excludeNewCases>false</ns2:excludeNewCases>

@@ -17,7 +17,7 @@ import org.msh.quantb.model.gen.Regimen;
 
 
 /**
- * Regimes parameters and result of forecasting
+ * Treatment regimes
  * 			
  * 
  * <p>Java class for ForecastingRegimen complex type.

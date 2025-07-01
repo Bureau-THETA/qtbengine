@@ -16,6 +16,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * The medicne replenishment order
+ * 
  * <p>Java class for ForecastingOrder complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

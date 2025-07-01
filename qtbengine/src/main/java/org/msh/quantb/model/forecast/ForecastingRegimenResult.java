@@ -16,6 +16,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Forecast for a regimen. Included to ForecastingRegimenResult. Medicines needs and cases quantity by phases of the regimen. 
+ * 
  * <p>Java class for ForecastingRegimenResult complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

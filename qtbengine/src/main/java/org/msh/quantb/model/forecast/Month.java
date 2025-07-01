@@ -14,7 +14,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Month representation. Very convinient instead date
+ * Month representation.
  * 			
  * 
  * <p>Java class for Month complex type.

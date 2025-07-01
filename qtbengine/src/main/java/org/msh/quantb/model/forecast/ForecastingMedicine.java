@@ -18,7 +18,8 @@ import org.msh.quantb.model.gen.Medicine;
 
 
 /**
- * Medicine parameters and result of forecasting
+ * 
+ * 				Result of the forecasting for medicines. Refer to the example provided along with the software library.
  * 			
  * 
  * <p>Java class for ForecastingMedicine complex type.

@@ -17,6 +17,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * A structured and predefined plan that outlines the specific medical treatment a patient is to receive over a given period.
+ * 
  * <p>Java class for Regimen complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

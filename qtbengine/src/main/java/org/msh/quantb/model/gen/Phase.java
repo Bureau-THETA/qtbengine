@@ -17,6 +17,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Refers to a defined period in a standardized drug regimen for administering specific medication combinations with set objectives. TB and cancer treatments may involve multiple phases.
+ * 
  * <p>Java class for Phase complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

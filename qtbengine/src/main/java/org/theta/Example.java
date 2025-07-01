@@ -97,8 +97,9 @@ public class Example {
      */
     private static void logResults(Forecast forecast, int linesPerMedicine, PrintWriter logStream) {
         try {
-            // Convert medicine list to XML byte array
-            byte[] xmlBytes = ForecastingMedicineConverter.convertToXmlBytes(forecast.getMedicines());
+   
+        	// Convert medicine and regimen lists to XML byte array
+            byte[] xmlBytes = ForecastingMedicineConverter.convertToXmlBytes(forecast.getMedicines(), forecast.getRegimes());
 
             // Store XML data in result.xml
             ForecastingMedicineConverter.storeXmlFile(xmlBytes, "result.xml");

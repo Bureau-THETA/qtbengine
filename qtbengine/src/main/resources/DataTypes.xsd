@@ -1,223 +1,214 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://www.msh.org/quantb/model/gen" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:qgen="http://www.msh.org/quantb/model/gen">
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:qgen="http://www.msh.org/quantb/model/gen" targetNamespace="http://www.msh.org/quantb/model/gen">
 
     <xsd:annotation>
-    	<xsd:documentation>This schema contains definitions of common complex XML types that are using in other schemas </xsd:documentation></xsd:annotation>
+    	<xsd:documentation>Definitions of elements, simple, and complex XML types that are using in other schemas </xsd:documentation></xsd:annotation>
     <xsd:complexType name="Medicine">
-    	<xsd:sequence>
-    		<xsd:element name="name" type="xsd:string" maxOccurs="1"
-    			minOccurs="1">
-    		</xsd:element>
-    		<xsd:element name="abbrevName" type="xsd:string"></xsd:element>
-    		<xsd:element name="strength" type="xsd:string"></xsd:element>
-    		<xsd:element name="form" type="qgen:MedicineFormEnum"
-    			maxOccurs="1" minOccurs="0">
-    		</xsd:element>
-    		<xsd:element name="dosage" type="xsd:string"></xsd:element>
+    	<xsd:annotation><xsd:documentation>Complex type Medicine in forecasting: groups elements and attributes.</xsd:documentation></xsd:annotation><xsd:sequence>
+    		<xsd:element name="name" type="xsd:string" maxOccurs="1" minOccurs="1">
+    		<xsd:annotation><xsd:documentation>International non-proprietary name, e.g. acetylsalicylic acid</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="abbrevName" type="xsd:string"><xsd:annotation><xsd:documentation>Common used abbreviated name, e.g. ASA for acetylsalicylic acid.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="strength" type="xsd:string"><xsd:annotation><xsd:documentation>Strength of a unit, e.g. "500 mg".</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="form" type="qgen:MedicineFormEnum" maxOccurs="1" minOccurs="0">
+    		<xsd:annotation><xsd:documentation>The Dosage Form, e.g. "Tablet"</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="dosage" type="xsd:string"><xsd:annotation><xsd:documentation>Outdated and deprecated</xsd:documentation></xsd:annotation></xsd:element>
 
-    		<xsd:element name="type" type="qgen:MedicineTypesEnum"></xsd:element>
+    		<xsd:element name="type" type="qgen:MedicineTypesEnum"><xsd:annotation><xsd:documentation>Additional classifier of medicinal product.Should be redefined below, or not used.</xsd:documentation></xsd:annotation></xsd:element>
 
-    		<xsd:element name="classifier"
-    			type="qgen:ClassifierTypesEnum">
-    		</xsd:element>
-    		<xsd:element name="type2018" type="qgen:Classifier2018"></xsd:element>
-    		<xsd:element name="typeARV" type="qgen:ClassifierARV"></xsd:element>
-    		<xsd:element name="formARV" type="qgen:formARV"></xsd:element>
+    		<xsd:element name="classifier" type="qgen:ClassifierTypesEnum">
+    		<xsd:annotation><xsd:documentation> Yet another additional classifier of medicinal product.Should be redefined below, or not used.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="type2018" type="qgen:Classifier2018"><xsd:annotation><xsd:documentation>Deprecated and outdated</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="typeARV" type="qgen:ClassifierARV"><xsd:annotation><xsd:documentation>Deprecated and outdated</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="formARV" type="qgen:formARV"><xsd:annotation><xsd:documentation>Deprecated and outdated</xsd:documentation></xsd:annotation></xsd:element>
     	</xsd:sequence>
     </xsd:complexType>
 
-
     <xsd:complexType name="MedicineRegimen">
-    	<xsd:sequence>
-    		<xsd:element name="medicine" type="qgen:Medicine"></xsd:element>
-    		<xsd:element name="duration" type="xsd:int"></xsd:element>
-    		<xsd:element name="dosage" type="xsd:int"></xsd:element>
+    	<xsd:annotation><xsd:documentation>It constitutes an assignment of a medicinal product in a phase of a treatment regimen.</xsd:documentation></xsd:annotation><xsd:sequence>
+    		<xsd:element name="medicine" type="qgen:Medicine"><xsd:annotation><xsd:documentation>The medicinal product.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="duration" type="xsd:int"><xsd:annotation><xsd:documentation>Duration of the assignment in months</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="dosage" type="xsd:int"><xsd:annotation><xsd:documentation>Dosage of the assignment in medicinal product units.</xsd:documentation></xsd:annotation></xsd:element>
     		<xsd:element name="daysPerWeek">
-    			<xsd:simpleType>
-    				<xsd:restriction base="xsd:int">
-    					<xsd:minInclusive value="1"></xsd:minInclusive>
-    					<xsd:maxInclusive value="7"></xsd:maxInclusive>
+    			<xsd:annotation><xsd:documentation>Days per week for assignment.</xsd:documentation></xsd:annotation><xsd:simpleType>
+    				<xsd:annotation><xsd:documentation>Constrains days per week from 1 to 7.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:int">
+    					<xsd:minInclusive value="1"/>
+    					<xsd:maxInclusive value="7"/>
     				</xsd:restriction>
     			</xsd:simpleType>
     		</xsd:element>
-    		<xsd:element name="startWeek" type="xsd:int"></xsd:element>
-    		<xsd:element name="endWeek" type="xsd:int"></xsd:element>
+    		<xsd:element name="startWeek" type="xsd:int"><xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="endWeek" type="xsd:int"><xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation></xsd:element>
     	</xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="Phase">
-    	<xsd:sequence>
-    		<xsd:element name="order" type="xsd:int"></xsd:element>
-    		<xsd:element name="duration" type="xsd:int"></xsd:element>
-    		<xsd:element name="measure" type="qgen:PhaseDurationEnum"></xsd:element>
-    		<xsd:element name="medications" type="qgen:MedicineRegimen"
-    			minOccurs="1" maxOccurs="unbounded">
-    		</xsd:element>
+    	<xsd:annotation><xsd:documentation>Refers to a defined period in a standardized drug regimen for administering specific medication combinations with set objectives. TB and cancer treatments may involve multiple phases.</xsd:documentation></xsd:annotation><xsd:sequence>
+    		<xsd:element name="order" type="xsd:int"><xsd:annotation><xsd:documentation>Order of phase from 1.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="duration" type="xsd:int"><xsd:annotation><xsd:documentation>Duration of phase in measure units defined by "measure".</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="measure" type="qgen:PhaseDurationEnum"><xsd:annotation><xsd:documentation>Duration of a phase may be in weeks or months.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="medications" type="qgen:MedicineRegimen" minOccurs="1" maxOccurs="unbounded">
+    		<xsd:annotation><xsd:documentation>list of medicinal product assignments.</xsd:documentation></xsd:annotation></xsd:element>
     	</xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="Regimen">
-    	<xsd:sequence>
-    		<xsd:element name="name" type="xsd:string"></xsd:element>
-    		<xsd:element name="type" type="qgen:RegimenTypesEnum"></xsd:element>
-    		<xsd:element name="intensive" type="qgen:Phase"></xsd:element>
-    		<xsd:element name="continious" type="qgen:Phase"></xsd:element>
-    		<xsd:element name="addPhases" type="qgen:Phase" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	<xsd:annotation><xsd:documentation>A structured and predefined plan that outlines the specific medical treatment a patient is to receive over a given period.</xsd:documentation></xsd:annotation><xsd:sequence>
+    		<xsd:element name="name" type="xsd:string"><xsd:annotation><xsd:documentation>Plain name of regimen, e.g., Shorter MDR fully oral with Bdq and Lfx (56-70kg).</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="type" type="qgen:RegimenTypesEnum"><xsd:annotation><xsd:documentation>Should be "Multi_Drug". The "Single_Drug" is only for QuanTB and Collector applications.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="intensive" type="qgen:Phase"><xsd:annotation><xsd:documentation>First phase in the multiphase regimen; the only one for the rest.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="continious" type="qgen:Phase"><xsd:annotation><xsd:documentation>First phase in the multiphase regimen.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="addPhases" type="qgen:Phase" maxOccurs="unbounded" minOccurs="0"><xsd:annotation><xsd:documentation>Additional phases for multiphase regimen.</xsd:documentation></xsd:annotation></xsd:element>
     		<xsd:element name="formulation" type="xsd:string">
     			<xsd:annotation>
     				<xsd:documentation>
-    					Consumption schem acted as regimen formula
+    					Official Abbreviated Notation, e.g., 2HRZE/4HR 
     				</xsd:documentation>
     			</xsd:annotation>
     		</xsd:element>
-    		<xsd:element name="duration" type="xsd:int"></xsd:element>
-    		<xsd:element name="medications" type="qgen:MedicineRegimen"
-    			maxOccurs="unbounded" minOccurs="0">
-    		</xsd:element>
+    		<xsd:element name="duration" type="xsd:int"><xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation></xsd:element>
+    		<xsd:element name="medications" type="qgen:MedicineRegimen" maxOccurs="unbounded" minOccurs="0">
+    		<xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation></xsd:element>
     	</xsd:sequence>
     </xsd:complexType>
 
     <xsd:complexType name="LocaleName">
     	<xsd:annotation>
     		<xsd:documentation>
-    			Name of something together with locale
+    			Name of the current language locale. Only QuanTB uses this data internally for user interface.
     		</xsd:documentation>
     	</xsd:annotation>
     	<xsd:sequence>
-    		<xsd:element name="value" type="xsd:string"></xsd:element>
+    		<xsd:element name="value" type="xsd:string"><xsd:annotation><xsd:documentation>A list of language locales available. Only QuanTB uses this data internally for user interface.</xsd:documentation></xsd:annotation></xsd:element>
     	</xsd:sequence>
-    	<xsd:attribute name="locale" type="xsd:string"></xsd:attribute>
+    	<xsd:attribute name="locale" type="xsd:string"/>
     </xsd:complexType>
 
     <xsd:complexType name="SimpleStamp">
         <xsd:annotation>
-        	<xsd:documentation>This data block stores last updater and update time for XML document</xsd:documentation>
+        	<xsd:documentation>Any string. Only QuanTB uses this data internally for user interface.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-    		<xsd:element name="lastUpdated" type="xsd:dateTime"></xsd:element>
+    		<xsd:element name="lastUpdated" type="xsd:dateTime"><xsd:annotation><xsd:documentation>Only QuanTB uses this. Last stored date and time in common ISO format, e.g.,2024-05-03T14:33:19.555+03:00</xsd:documentation></xsd:annotation></xsd:element>
     	</xsd:sequence>
-    	<xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+    	<xsd:attribute name="name" type="xsd:string"/>
     </xsd:complexType>
 
 
     <xsd:simpleType name="RegimenTypesEnum">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="Multi_Drug"></xsd:enumeration>
-			<xsd:enumeration value="Single_Drug"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Should be Multi_Drug. Has sufficient inpact on calculation The Single_Drug is for QuanTB, thus, ask QuanTB experts. </xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="Multi_Drug"/>
+			<xsd:enumeration value="Single_Drug"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="MedicineTypesEnum">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="UNKNOWN"></xsd:enumeration>
-    		<xsd:enumeration value="First_Line"></xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Parenteral_Agent"></xsd:enumeration>
-    		<xsd:enumeration value="Fluoroquinolones"></xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Oral_Bacteriostatic"></xsd:enumeration>
-    		<xsd:enumeration value="Group_5"></xsd:enumeration>
-    		<xsd:enumeration value="Pediatric"></xsd:enumeration>
-    		<xsd:enumeration value="Other"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Tuberculosis medicines for QuanTB. Has not impact on calculation.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="UNKNOWN"/>
+    		<xsd:enumeration value="First_Line"/>
+    		<xsd:enumeration value="Second_Line_Parenteral_Agent"/>
+    		<xsd:enumeration value="Fluoroquinolones"/>
+    		<xsd:enumeration value="Second_Line_Oral_Bacteriostatic"/>
+    		<xsd:enumeration value="Group_5"/>
+    		<xsd:enumeration value="Pediatric"/>
+    		<xsd:enumeration value="Other"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="MedicineFormEnum">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="CAPSULE"></xsd:enumeration>
-    		<xsd:enumeration value="DISPERSIBLE_TABLET"></xsd:enumeration>
-    		<xsd:enumeration value="FILM_COATED_TABLET"></xsd:enumeration>
-    		<xsd:enumeration value="FILM_UNCOATED_TABLET"></xsd:enumeration>
-    		<xsd:enumeration value="GRANULE"></xsd:enumeration>
-    		<xsd:enumeration value="POWDER_FOR_INJECTION"></xsd:enumeration>
-    		<xsd:enumeration value="SOLUTION_FOR_INJECTION"></xsd:enumeration>
-    		<xsd:enumeration value="OTHER"></xsd:enumeration>
-    		<xsd:enumeration value="NA"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Restricted classifier from https://standardterms.edqm.eu/browse/get_concepts/BDF. Has not impact on calculation.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="CAPSULE"/>
+    		<xsd:enumeration value="DISPERSIBLE_TABLET"/>
+    		<xsd:enumeration value="FILM_COATED_TABLET"/>
+    		<xsd:enumeration value="FILM_UNCOATED_TABLET"/>
+    		<xsd:enumeration value="GRANULE"/>
+    		<xsd:enumeration value="POWDER_FOR_INJECTION"/>
+    		<xsd:enumeration value="SOLUTION_FOR_INJECTION"/>
+    		<xsd:enumeration value="OTHER"/>
+    		<xsd:enumeration value="NA"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="PhaseDurationEnum">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="WEEKLY"></xsd:enumeration>
-    		<xsd:enumeration value="MONTHLY"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Treatment regimen phase duration may be in weeks or in months.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="WEEKLY"/>
+    		<xsd:enumeration value="MONTHLY"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
 
     <xsd:simpleType name="DeliveryScheduleEnum">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="ONCE"></xsd:enumeration>
-    		<xsd:enumeration value="YEAR"></xsd:enumeration>
-    		<xsd:enumeration value="HALF"></xsd:enumeration>
-    		<xsd:enumeration value="QUARTER"></xsd:enumeration>
-    		<xsd:enumeration value="EXACT"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>The schedule of Replenishment orders for QuanTB. Has not impact on calculation.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="ONCE"/>
+    		<xsd:enumeration value="YEAR"/>
+    		<xsd:enumeration value="HALF"/>
+    		<xsd:enumeration value="QUARTER"/>
+    		<xsd:enumeration value="EXACT"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="ClassifierTypesEnum">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="UNKNOWN"></xsd:enumeration>
-    		<xsd:enumeration value="FIRST_LINE_ADULT"></xsd:enumeration>
-    		<xsd:enumeration value="FIRST_LINE_PEDIATRIC"></xsd:enumeration>
-    		<xsd:enumeration value="SECOND_LINE_FLUOR"></xsd:enumeration>
-    		<xsd:enumeration value="SECOND_LINE_INJECT"></xsd:enumeration>
-    		<xsd:enumeration value="OTHER_CORE_SECOND_LINE"></xsd:enumeration>
-    		<xsd:enumeration value="DB_ADDON_SECOND_LINE"></xsd:enumeration>
-    		<xsd:enumeration value="DC_ADDON_SECOND_LINE"></xsd:enumeration>
-    		<xsd:enumeration value="OTHER_SUPPLIERS_MEDICINES"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="UNKNOWN"/>
+    		<xsd:enumeration value="FIRST_LINE_ADULT"/>
+    		<xsd:enumeration value="FIRST_LINE_PEDIATRIC"/>
+    		<xsd:enumeration value="SECOND_LINE_FLUOR"/>
+    		<xsd:enumeration value="SECOND_LINE_INJECT"/>
+    		<xsd:enumeration value="OTHER_CORE_SECOND_LINE"/>
+    		<xsd:enumeration value="DB_ADDON_SECOND_LINE"/>
+    		<xsd:enumeration value="DC_ADDON_SECOND_LINE"/>
+    		<xsd:enumeration value="OTHER_SUPPLIERS_MEDICINES"/>
     		
     	</xsd:restriction>
     </xsd:simpleType>
 
 
     <xsd:simpleType name="Classifier2018">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="First_Line"></xsd:enumeration>
-    		<xsd:enumeration value="First_Line_Second_Line_Group_C"></xsd:enumeration>
-    		<xsd:enumeration value="Medical_supplies"></xsd:enumeration>
-    		<xsd:enumeration value="Other"></xsd:enumeration>
-    		<xsd:enumeration value="Pediatric_First_Line"></xsd:enumeration>
-    		<xsd:enumeration
-    			value="Pediatric_First_Line_Second_Line_Group_C">
+    	<xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="First_Line"/>
+    		<xsd:enumeration value="First_Line_Second_Line_Group_C"/>
+    		<xsd:enumeration value="Medical_supplies"/>
+    		<xsd:enumeration value="Other"/>
+    		<xsd:enumeration value="Pediatric_First_Line"/>
+    		<xsd:enumeration value="Pediatric_First_Line_Second_Line_Group_C">
     		</xsd:enumeration>
-    		<xsd:enumeration value="Pediatric_Second_Line_Group_C"></xsd:enumeration>
-    		<xsd:enumeration
-    			value="Pediatric_Second_Line_Fluoroquinolone_Group_A">
+    		<xsd:enumeration value="Pediatric_Second_Line_Group_C"/>
+    		<xsd:enumeration value="Pediatric_Second_Line_Fluoroquinolone_Group_A">
     		</xsd:enumeration>
-    		<xsd:enumeration value="Second_Line"></xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Group_A"></xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Group_B"></xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Group_C"></xsd:enumeration>
-    		<xsd:enumeration
-    			value="Second_Line_Fluoroquinolone_Group_A">
+    		<xsd:enumeration value="Second_Line"/>
+    		<xsd:enumeration value="Second_Line_Group_A"/>
+    		<xsd:enumeration value="Second_Line_Group_B"/>
+    		<xsd:enumeration value="Second_Line_Group_C"/>
+    		<xsd:enumeration value="Second_Line_Fluoroquinolone_Group_A">
     		</xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Injectable"></xsd:enumeration>
-    		<xsd:enumeration value="Second_Line_Injectable_Group_C"></xsd:enumeration>
-    		<xsd:enumeration value="UNKNOWN"></xsd:enumeration>
+    		<xsd:enumeration value="Second_Line_Injectable"/>
+    		<xsd:enumeration value="Second_Line_Injectable_Group_C"/>
+    		<xsd:enumeration value="UNKNOWN"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="ClassifierARV">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="NRTI"></xsd:enumeration>
-    		<xsd:enumeration value="NNRTI"></xsd:enumeration>
-    		<xsd:enumeration value="Protease_Inhibitors"></xsd:enumeration>
-    		<xsd:enumeration value="Fusion_Inhibitors"></xsd:enumeration>
-    		<xsd:enumeration value="CCR5_Antagonists"></xsd:enumeration>
-    		<xsd:enumeration value="Integrase_Inhibitors"></xsd:enumeration>
-    		<xsd:enumeration value="Post_Attachment_Inhibitors"></xsd:enumeration>
-    		<xsd:enumeration value="Pharmacokinetic_Enhancers"></xsd:enumeration>
-    		<xsd:enumeration value="UNKNOWN"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="NRTI"/>
+    		<xsd:enumeration value="NNRTI"/>
+    		<xsd:enumeration value="Protease_Inhibitors"/>
+    		<xsd:enumeration value="Fusion_Inhibitors"/>
+    		<xsd:enumeration value="CCR5_Antagonists"/>
+    		<xsd:enumeration value="Integrase_Inhibitors"/>
+    		<xsd:enumeration value="Post_Attachment_Inhibitors"/>
+    		<xsd:enumeration value="Pharmacokinetic_Enhancers"/>
+    		<xsd:enumeration value="UNKNOWN"/>
     	</xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="formARV">
-    	<xsd:restriction base="xsd:string">
-    		<xsd:enumeration value="UNKNOWN"></xsd:enumeration>
-    		<xsd:enumeration value="TABLETS"></xsd:enumeration>
-    		<xsd:enumeration value="TABLETS_FDC"></xsd:enumeration>
-    		<xsd:enumeration value="SOLUTION"></xsd:enumeration>
-    		<xsd:enumeration value="CAPSULES"></xsd:enumeration>
-    		<xsd:enumeration value="SOLUBLE_TABLETS "></xsd:enumeration>
-    		<xsd:enumeration value="ORAL GRANULES"></xsd:enumeration>
+    	<xsd:annotation><xsd:documentation>Deprecated and outdated.</xsd:documentation></xsd:annotation><xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="UNKNOWN"/>
+    		<xsd:enumeration value="TABLETS"/>
+    		<xsd:enumeration value="TABLETS_FDC"/>
+    		<xsd:enumeration value="SOLUTION"/>
+    		<xsd:enumeration value="CAPSULES"/>
+    		<xsd:enumeration value="SOLUBLE_TABLETS "/>
+    		<xsd:enumeration value="ORAL GRANULES"/>
     	</xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>

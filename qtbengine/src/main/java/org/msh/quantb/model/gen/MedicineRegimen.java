@@ -14,6 +14,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * It constitutes an assignment of a medicinal product in a phase of a treatment regimen.
+ * 
  * <p>Java class for MedicineRegimen complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

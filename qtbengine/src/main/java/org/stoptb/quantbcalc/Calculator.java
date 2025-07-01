@@ -1,15 +1,10 @@
 package org.stoptb.quantbcalc;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,6 +35,7 @@ import org.msh.quantb.services.io.ForecastingRegimenResultUIAdapter;
 import org.msh.quantb.services.io.ForecastingRegimenUIAdapter;
 import org.msh.quantb.services.io.KitDefinitionUIAdapter;
 import org.msh.quantb.services.io.MedicineUIAdapter;
+
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.UnmarshalException;
 
@@ -165,14 +161,6 @@ public class Calculator {
 		calc.adjustResults();
 		calc.calcMedicines();
 		calc.calcMedicinesResults();
-		// additional calculation for kits
-		for (ForecastingRegimenUIAdapter fru : calc.getForecastUI().getRegimes()) {
-			if (!fru.getKitUI().isNotKit()) {
-				fru.setExcludeCasesOnTreatment(storeOnTreatmentFlags.get(fru.getRegimen().getBusinessKey()));
-				fru.setExcludeNewCases(storeNewCasesFlags.get(fru.getRegimen().getBusinessKey()));
-				calculateKits(calc, fru);
-			}
-		}
 		// advanced calculation
 		calc.getResume();
 		List<MedicineConsumption> mCons = calc.getMedicineConsumption();
@@ -215,51 +203,6 @@ public class Calculator {
 		ModelFactory.of("").cleanUpForecast(forecast.getForecastObj());
 		calc.clearResults();
 		return result;
-	}
-
-	/**
-	 * Calculate needs for medicines kits
-	 * 
-	 * @param calc
-	 * @param fru
-	 * @param original
-	 */
-	private void calculateKits(ForecastingCalculation calc, ForecastingRegimenUIAdapter fru) {
-		// calculate cases quantity for kits served regimes
-		Calendar begin = calc.getForecastUI().getVeryFirstDate();
-		Calendar end = calc.getForecastUI().getLastDate();
-		fru.getFcRegimenObj().getResults().clear();
-		calc.calcCasesOnTreatmentRegimen(begin, end, fru);
-		calc.calcNewCasesRegimen(begin, end, fru);
-		// find the kit in the forecasting medicines list
-		ForecastingMedicineUIAdapter kitUi = findMedicineByKit(calc.getForecastUI(), fru.getKitUI());
-		if (kitUi != null) {
-			KitCalculator kitCalc = KitCalculator.of(calc.getForecastUI().getForecastObj(),
-					fru.getFcRegimenObj().getOriginal(), kitUi.getFcMedicineObj());
-			kitCalc.defineNeeds();
-			kitCalc.consume();
-		} else {
-			//logger.error("Medicine (kit) not found. Name is " + fru.getKitUI().getKitName());
-		}
-	}
-
-	/**
-	 * Find medicine that represents the kit
-	 * 
-	 * @param forecast
-	 * @param kitDefinition
-	 * @return null, if not found
-	 */
-	private ForecastingMedicineUIAdapter findMedicineByKit(ForecastUIAdapter fui, KitDefinitionUIAdapter kitUi) {
-		ForecastingMedicineUIAdapter ret = null;
-		MedicineUIAdapter kitMui = MedicineUIAdapter.of(kitUi.getKitDefinition());
-		for (ForecastingMedicineUIAdapter fmUi : fui.getMedicines()) {
-			if (fmUi.getMedicine().createQuanTbKey().equals(kitMui.createQuanTbKey())) {
-				ret = fmUi;
-				break;
-			}
-		}
-		return ret;
 	}
 
 	/**

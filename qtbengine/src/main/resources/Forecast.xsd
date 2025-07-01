@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<schema targetNamespace="http://www.msh.org/quantb/model/forecast"
-	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
-	xmlns:frcst="http://www.msh.org/quantb/model/forecast" xmlns:qgen="http://www.msh.org/quantb/model/gen"
-	xmlns:regdic="http://www.msh.org/quantb/model/regimen">
+<?xml version='1.0' encoding='UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:frcst="http://www.msh.org/quantb/model/forecast" xmlns:qgen="http://www.msh.org/quantb/model/gen" xmlns:regdic="http://www.msh.org/quantb/model/regimen" targetNamespace="http://www.msh.org/quantb/model/forecast" elementFormDefault="qualified">
 
 	<import schemaLocation="DataTypes.xsd" namespace="http://www.msh.org/quantb/model/gen">
 	</import>
@@ -14,14 +11,14 @@
 	<complexType name="Forecast">
 		<annotation>
 			<documentation>
-				Input parameters for a Medicinal Products Forecast
+				Input parameters and results.
 			</documentation>
 		</annotation>
 		<sequence>
 			<element name="name" type="string">
 				<annotation>
 					<documentation>
-						Meaningful name of the input parameters, e.g. District112_20250403 
+						Meaningful name of the input parameters, e.g., District112_20250403 
 					</documentation>
 				</annotation>
 			</element>
@@ -29,9 +26,7 @@
 			<element name="referenceDate" type="date">
 				<annotation>
 					<documentation>
-						Date when parameters used for forecasting
-						calculation was valid. In most cases it is date,
-						when new forecasting was initialized
+						The date when the medicine stock, orders, and enrolled cases are confirmed. Ideally, this should be the day before the forecasting period.
 					</documentation>
 				</annotation>
 			</element>
@@ -55,167 +50,151 @@
 			<element name="bufferStockTime" type="int">
 				<annotation>
 					<documentation>
-						The reserve months after the forecasting period
+						Deprecated and outdated.
 					</documentation>
 				</annotation>
 			</element>
 
 			<element name="minStock" type="int">
 				<annotation>
-					<documentation>Minimum allowed stock</documentation>
+					<documentation>Minimal stock that should be on hand. The parameter's value represents the number of months of future consumption..</documentation>
 				</annotation>
 			</element>
 			<element name="maxStock" type="int">
 				<annotation>
-					<documentation>Maximum allowed stock</documentation>
+					<documentation>Maximal stock that should be on hand. The parameter's value represents the number of months of future consumption.</documentation>
 				</annotation>
 			</element>
 			<element name="leadTime" type="int">
 				<annotation>
 					<documentation>
-						Counts in units defined in timeMeasuring. Refers
-						to medicine order execution period.
+						Months between placing an order and receiving the goods.
 					</documentation>
 				</annotation>
 			</element>
 
 			<element name="recordingDate" type="date">
 				<annotation>
-					<documentation>Last save date</documentation>
+					<documentation>Last save date for forecasting file. Does not used for calculation.</documentation>
 				</annotation>
 			</element>
 
 			<element name="timeMeasuring" type="frcst:TimeMeasuring">
 				<annotation>
 					<documentation>
-						Tme unit uses in bufferStockTime or leadTime.
-						May be MONTHS or DAYS
+						Deprecated and outdated.
 					</documentation>
 				</annotation>
 			</element>
 
 			<element name="comment" type="string" minOccurs="0">
 				<annotation>
-					<documentation>any comments</documentation>
+					<documentation></documentation>
 				</annotation>
 			</element>
-			<element name="medicines" type="frcst:ForecastingMedicine"
-				minOccurs="0" maxOccurs="unbounded">
+			<element name="medicines" type="frcst:ForecastingMedicine" minOccurs="0" maxOccurs="unbounded">
 				<annotation>
 					<documentation>
-						The subject of forecasting - medicine parameters
-						and calulation results
+						Medicines In stock and orders. Forecasting results for each drug.
 					</documentation>
 				</annotation>
 			</element>
-			<element name="regimensType" type="qgen:RegimenTypesEnum"></element>
-			<element name="regimes" type="frcst:ForecastingRegimen"
-				minOccurs="0" maxOccurs="unbounded">
+			<element name="regimensType" type="qgen:RegimenTypesEnum"><annotation><documentation>Should be Multi_Drug. Ask QuanTQ experts for Single_Drug usage.</documentation></annotation></element>
+			<element name="regimes" type="frcst:ForecastingRegimen" minOccurs="0" maxOccurs="unbounded">
 				<annotation>
 					<documentation>
-						Regimen parameters and results of forecasting
+						Common parametrs for forecasting
 					</documentation>
 				</annotation>
 			</element>
-			<element name="newCases" type="frcst:MonthQuantity"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="casesOnTreatment" type="frcst:MonthQuantity"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="country" type="string"></element>
-			<element name="institution" type="string"></element>
-			<element name="calculator" type="string"></element>
-			<element name="region" type="string"></element>
-			<element name="address" type="string"></element>
-			<element name="total" type="frcst:ForecastingTotalItem"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="totalR" type="frcst:ForecastingTotalItem"
-				maxOccurs="unbounded" minOccurs="0">
+			<element name="newCases" type="frcst:MonthQuantity" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Use these expected cases for proprietary QuanTB algorithms (Single_Drug or percentage) when calculating. Don't use them if you're unsure of the purpose.</documentation></annotation></element>
+			<element name="casesOnTreatment" type="frcst:MonthQuantity" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Use these enrolled cases for proprietary QuanTB algorithms (Single_Drug or percentage) when calculating. Don't use them if you're unsure of the purpose.</documentation></annotation></element>
+			<element name="country" type="string"><annotation><documentation>Origin Country name in free form format. ISO code is appretiated.</documentation></annotation></element>
+			<element name="institution" type="string"><annotation><documentation>Name of origin institution inside the Country.</documentation></annotation></element>
+			<element name="calculator" type="string"><annotation><documentation>Name of a person responsible.</documentation></annotation></element>
+			<element name="region" type="string"><annotation><documentation>Name of region in free text format.</documentation></annotation></element>
+			<element name="address" type="string"><annotation><documentation>Optional address for any purpose.</documentation></annotation></element>
+			<element name="total" type="frcst:ForecastingTotalItem" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Used in QuanTB for both regular and accelerated drug orders.Ask QuanTQ experts for usage.</documentation></annotation></element>
+			<element name="totalR" type="frcst:ForecastingTotalItem" maxOccurs="unbounded" minOccurs="0">
 				<annotation>
 					<documentation>
-						A totals for the regular order
+						Used in QuanTB for both regular drug orders.Ask QuanTQ experts for usage.
 					</documentation>
 				</annotation>
 			</element>
-			<element name="totalA" type="frcst:ForecastingTotalItem"
-				maxOccurs="unbounded" minOccurs="0">
+			<element name="totalA" type="frcst:ForecastingTotalItem" maxOccurs="unbounded" minOccurs="0">
 				<annotation>
 					<documentation>
-						A totals for Accelerated order
+						Used in QuanTB for accelerated drug orders.Ask QuanTQ experts for usage.
 					</documentation>
 				</annotation>
 			</element>
 			<element name="totalComment1" type="string">
 				<annotation>
 					<documentation>
-						a comment on the first ordr tab
+						Used in QuanTB for cost of order structure.Ask QuanTQ experts for usage.
 					</documentation>
 				</annotation>
 			</element>
 			<element name="totalComment2" type="string">
 				<annotation>
 					<documentation>
-						a comment on the second order tab
+						Used in QuanTB for cost of order structure.Ask QuanTQ experts for usage.
 					</documentation>
 				</annotation>
 			</element>
 			<element name="totalComment3" type="string">
 				<annotation>
 					<documentation>
-						a comment on the thirt order tab
+						Used in QuanTB for cost of order structure.Ask QuanTQ experts for usage.
 					</documentation>
 				</annotation>
 			</element>
 			<element name="totalComment4" type="string">
 				<annotation>
 					<documentation>
-						a comment on the fourth order tab
+						Used in QuanTB for cost of order structure.Ask QuanTQ experts for usage.
 					</documentation>
 				</annotation>
 			</element>
 			<element name="isOldPercents" type="boolean">
 				<annotation>
 					<documentation>
-						True, if user changed percent based data for
-						enrolled cases. Null or false, if user changed
-						quantity based data for enrolled cases
+						If true, will be used calculation alrorithm proprietary for QuanTB (precentage). Set to false is recommended. 
 					</documentation>
 				</annotation>
 			</element>
-			<element name="isNewPercents" type="boolean"></element>
+			<element name="isNewPercents" type="boolean"><annotation><documentation>If true, will be used calculation alrorithm proprietary for QuanTB (precentage). Set to false is recommended. </documentation></annotation></element>
 			<element name="deliverySchedule" type="qgen:DeliveryScheduleEnum">
-			</element>
+			<annotation><documentation>Replenishmen orders schedule for regular orders. It is proprietary for QuanTB. Set it to EXACT.</documentation></annotation></element>
 			<element name="acceleratedSchedule" type="qgen:DeliveryScheduleEnum">
 				<annotation>
 					<documentation>
-						Deivery schedule for accelerated orders
+						Replenishmen orders schedule for accelerated orders. It is proprietary for QuanTB. Set it to EXACT.
 					</documentation>
 				</annotation>
 			</element>
 			<element name="scenario" type="boolean">
 				<annotation>
-					<documentation>It is way how to calculate orders. False means
-						optimistic scenario, true - pessimistic :) Optimistic scenario -
-						order only missing, pessimistic - order extra to always obey min
-						constrain</documentation>
+					<documentation>outdated and deprecated. Set to false.</documentation>
 				</annotation>
 			</element>
-			<element name="qtbVersion" type="string"></element>
+			<element name="qtbVersion" type="string"><annotation><documentation>For current, set it to 4.0.0.0-compatible.</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<simpleType name="TimeMeasuring">
 		<annotation>
 			<documentation>
-				This is lead time measuring. Often MONTHS, very rare -
-				DAYS
+				outdated and deprecated.
 			</documentation>
 		</annotation>
 		<restriction base="string">
-			<enumeration value="DAYS"></enumeration>
-			<enumeration value="MONTHS"></enumeration>
+			<enumeration value="DAYS"/>
+			<enumeration value="MONTHS"/>
 		</restriction>
 	</simpleType>
 
@@ -223,143 +202,118 @@
 
 	<complexType name="ForecastingRegimen">
 		<annotation>
-			<documentation>Regimes parameters and result of forecasting
+			<documentation>Treatment regimes
 			</documentation>
 		</annotation>
 		<sequence>
 			<element name="percentNewCases" type="float">
 				<annotation>
-					<documentation></documentation>
+					<documentation/>
 				</annotation>
 			</element>
-			<element name="percentCasesOnTreatment" type="float"></element>
-			<element name="regimen" type="qgen:Regimen"></element>
-			<element name="results"
-				type="frcst:ForecastingRegimenResult" maxOccurs="unbounded"
-				minOccurs="0">
-			</element>
-			<element name="casesOnTreatment" type="frcst:MonthQuantity"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="newCases" type="frcst:MonthQuantity"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
+			<element name="percentCasesOnTreatment" type="float"><annotation><documentation>Proprietary for QuanTB. Set it to false</documentation></annotation></element>
+			<element name="regimen" type="qgen:Regimen"><annotation><documentation>Regimen parameters and results.</documentation></annotation></element>
+			<element name="results" type="frcst:ForecastingRegimenResult" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Results of forecasting grouped by treatment regimens.</documentation></annotation></element>
+			<element name="casesOnTreatment" type="frcst:MonthQuantity" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Cases enrolled for the treatment regimen.</documentation></annotation></element>
+			<element name="newCases" type="frcst:MonthQuantity" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Cases expected to be enrolled for the thereatment regimen.</documentation></annotation></element>
 			<element name="excludeNewCases" type="boolean">
 				<annotation>
 					<documentation>
-						If false, new cases should be included to
-						calculation. Otherwise - excluded. This
-						attribute works in "reverse" order to provide
-						compatibility with previous forecasting format
+						Set it to false initially. If true, it excludes expected cases from calculations for various scenarios.
 					</documentation>
 				</annotation>
 			</element>
-			<element name="excludeCasesOnTreatment" type="boolean"></element>
-			<element name="kit" type="frcst:KitDefinition"></element>
+			<element name="excludeCasesOnTreatment" type="boolean"><annotation><documentation>Set it to false initially. If true, it excludes enrolled cases from calculations for various scenarios.</documentation></annotation></element>
+			<element name="kit" type="frcst:KitDefinition"><annotation><documentation>This parameter is proprietary for QuanTB. Do not use it otherwise.</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 
 	<complexType name="MonthQuantity">
 		<annotation>
-			<documentation>Integer quantity something in month given (cases,
-				medicines, etc)
-			</documentation>
+			<documentation>Quantity of enrolled or expected cases in a month given.</documentation>
 		</annotation>
 		<sequence>
-			<element name="iQuantity" type="int"></element>
-			<element name="month" type="frcst:Month"></element>
+			<element name="iQuantity" type="int"><annotation><documentation>The quantity.</documentation></annotation></element>
+			<element name="month" type="frcst:Month"><annotation><documentation>Month starts from 0 (0 = January).</documentation></annotation></element>
 		</sequence>
 	</complexType>
-
-
-
-
 
 	<complexType name="ForecastingMedicine">
 		<annotation>
-			<documentation>Medicine parameters and result of forecasting
+			<documentation>
+				Result of the forecasting for medicines. Refer to the example provided along with the software library.
 			</documentation>
 		</annotation>
 		<sequence>
-			<element name="medicine" type="qgen:Medicine"></element>
-			<element name="stockOnOrderLT" type="long"></element>
-			<element name="consumptionLT" type="long"></element>
-			<element name="quantityMissingLT" type="long"></element>
-			<element name="quantityExpiredLT" type="long"></element>
-			<element name="consumptionCases" type="long"></element>
-			<element name="consumptionNewCases" type="long"></element>
-			<element name="unitPrice" type="int"></element>
-			<element name="stockOnHand" type="long"></element>
-			<element name="batchesToExpire" type="frcst:ForecastingBatch"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="orders" type="frcst:ForecastingOrder"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="results" type="frcst:ForecastingResult"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="packOrder" type="frcst:PricePack" maxOccurs="1"
-				minOccurs="0">
-			</element>
-			<element name="ajustmentEnrolled" type="decimal"></element>
-			<element name="adjustmentExpected" type="decimal"></element>
+			<element name="medicine" type="qgen:Medicine"><annotation><documentation>The definition of a medicine</documentation></annotation></element>
+			<element name="stockOnOrderLT" type="long"><annotation><documentation>Deprecated by ForecastingResult.</documentation></annotation></element>
+			<element name="consumptionLT" type="long"><annotation><documentation>Deprecated by ForecastingResult.</documentation></annotation></element>
+			<element name="quantityMissingLT" type="long"><annotation><documentation>Deprecated by ForecastingResult.</documentation></annotation></element>
+			<element name="quantityExpiredLT" type="long"><annotation><documentation>Deprecated by ForecastingResult.</documentation></annotation></element>
+			<element name="consumptionCases" type="long"><annotation><documentation>Deprecated by ForecastingResult.</documentation></annotation></element>
+			<element name="consumptionNewCases" type="long"><annotation><documentation>Deprecated by ForecastingResult.</documentation></annotation></element>
+			<element name="unitPrice" type="int"><annotation><documentation>Particulat to QuanTB. Price of the tablet, etc.</documentation></annotation></element>
+			<element name="stockOnHand" type="long"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
+			<element name="batchesToExpire" type="frcst:ForecastingBatch" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Initial Stock on hand.</documentation></annotation></element>
+			<element name="orders" type="frcst:ForecastingOrder" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Initial orders to the stock replenishment.</documentation></annotation></element>
+			<element name="results" type="frcst:ForecastingResult" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Forecasting for each day of the forecasting period.</documentation></annotation></element>
+			<element name="packOrder" type="frcst:PricePack" maxOccurs="1" minOccurs="0">
+			<annotation><documentation>Particulat to QuanTB. Input data for accelerated and regular orders.</documentation></annotation></element>
+			<element name="ajustmentEnrolled" type="decimal"><annotation><documentation>Factor to adjust for the loss of enrolled cases due to attrition.100% means no attrition, 0% means all cases are lost.</documentation></annotation></element>
+			<element name="adjustmentExpected" type="decimal"><annotation><documentation>Factor to adjust for the loss of expected cases due to attrition.100% means no attrition, 0% means all cases are lost.</documentation></annotation></element>
 		</sequence>
 	</complexType>
-
-
-
-
-
-
 
 	<complexType name="Month">
 		<annotation>
-			<documentation>Month representation. Very convinient instead date
+			<documentation>Month representation.
 			</documentation>
 		</annotation>
 		<sequence>
-			<element name="Year" type="int"></element>
-			<element name="Month" type="int"></element>
+			<element name="Year" type="int"><annotation><documentation>Year, e.g., 20025.</documentation></annotation></element>
+			<element name="Month" type="int"><annotation><documentation>Month - 0 - January, 1 - February,..,11-December.</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 
-
-
-
-	<element name="forecast" type="frcst:Forecast"></element>
+	<element name="forecast" type="frcst:Forecast"><annotation><documentation>Defiition for a forecast itself is necessary. See complex type Forecast above.</documentation></annotation></element>
 
 	<complexType name="ForecastingResult">
+		<annotation><documentation>Result of a forecasting calculation for days, usually for one day.</documentation></annotation>
 		<sequence>
-			<element name="month" type="frcst:Month"></element>
-			<element name="fromDay" type="int"></element>
-			<element name="toDay" type="int"></element>
-			<element name="oldCases" type="decimal"></element>
-			<element name="newCases" type="decimal"></element>
-			<element name="consOld" type="decimal"></element>
-			<element name="consNew" type="decimal"></element>
-			<element name="missing" type="decimal"></element>
-			<element name="batches" type="frcst:ForecastingBatch"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="orders" type="frcst:ForecastingOrder"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
+			<element name="month" type="frcst:Month"><annotation><documentation>The month of the result.</documentation></annotation></element>
+			<element name="fromDay" type="int"><annotation><documentation>Start date in a month for the result.</documentation></annotation></element>
+			<element name="toDay" type="int"><annotation><documentation>End date in a month for the result.</documentation></annotation></element>
+			<element name="oldCases" type="decimal"><annotation><documentation>Enrolled cases.</documentation></annotation></element>
+			<element name="newCases" type="decimal"><annotation><documentation>Expected cases.</documentation></annotation></element>
+			<element name="consOld" type="decimal"><annotation><documentation>Medications available for enrolled cases.</documentation></annotation></element>
+			<element name="consNew" type="decimal"><annotation><documentation>Medications available for expected cases.</documentation></annotation></element>
+			<element name="missing" type="decimal"><annotation><documentation>The stockout</documentation></annotation></element>
+			<element name="batches" type="frcst:ForecastingBatch" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Stock on hand.</documentation></annotation></element>
+			<element name="orders" type="frcst:ForecastingOrder" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Stock will have been restocked from orders.</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<complexType name="ForecastingBatch">
+		<annotation><documentation>Medicines batch and forecasting result for it. A medicinal product in stock consists of batches. A batch is a specified quantity of the same medicinal product that shares the same expiration date.</documentation></annotation>
 		<sequence>
-			<element name="expired" type="date"></element>
-			<element name="expiryDate" type="frcst:Month"></element>
-			<element name="quantity" type="long"></element>
-			<element name="comment" type="string"></element>
-			<element name="quantityAvailable" type="decimal"></element>
-			<element name="quantityExpired" type="long"></element>
-			<element name="consumptionInMonth" type="decimal"></element>
-			<element name="availFrom" type="date"></element>
+			<element name="expired" type="date"><annotation><documentation>The expiration date.</documentation></annotation></element>
+			<element name="expiryDate" type="frcst:Month"><annotation><documentation>The expiration date.</documentation></annotation></element>
+			<element name="quantity" type="long"><annotation><documentation>The initial quantity in tablets, ampoules, etc., not in packages.</documentation></annotation></element>
+			<element name="comment" type="string"><annotation><documentation>Any text.</documentation></annotation></element>
+			<element name="quantityAvailable" type="decimal"><annotation><documentation>The currently available quantity in tablets, ampoules, etc., not in packages.</documentation></annotation></element>
+			<element name="quantityExpired" type="long"><annotation><documentation>The currently expired quantity in tablets, ampoules, etc., not in packages.</documentation></annotation></element>
+			<element name="consumptionInMonth" type="decimal"><annotation><documentation>Dispensed from the batch. Sorry for the wrong name. It is a historical issue.</documentation></annotation></element>
+			<element name="availFrom" type="date"><annotation><documentation>Availability date: For stock on hand, it is always 1900-02-22. For stock in orders, it is a date when consumption will be possible.</documentation></annotation></element>
 			<element name="exclude" type="boolean">
 				<annotation>
 					<documentation>
@@ -367,7 +321,7 @@
 					</documentation>
 				</annotation>
 			</element>
-			<element name="gdf" type="boolean"></element>
+			<element name="gdf" type="boolean"><annotation><documentation>Only for Collector and QuanTB. Does Global Drug Fund manage this batch</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
@@ -375,73 +329,71 @@
 
 
 	<complexType name="ForecastingRegimenResult">
+		<annotation><documentation>Forecast for a regimen. Included to ForecastingRegimenResult. Medicines needs and cases quantity by phases of the regimen. </documentation></annotation>
 		<sequence>
-			<element name="month" type="frcst:Month"></element>
-			<element name="fromDay" type="int"></element>
-			<element name="toDay" type="int"></element>
-			<element name="intensive" type="frcst:PhaseResult"></element>
-			<element name="continious" type="frcst:PhaseResult"></element>
-			<element name="addPhases" type="frcst:PhaseResult" maxOccurs="unbounded"
-				minOccurs="0"></element>
-			<element name="weekList" type="frcst:WeekQuantity" maxOccurs="unbounded"
-				minOccurs="0">
-			</element>
-			<element name="cons" type="frcst:MedicineCons" maxOccurs="unbounded"
-				minOccurs="0">
-			</element>
+			<element name="month" type="frcst:Month"><annotation><documentation>The month of a forecast result</documentation></annotation></element>
+			<element name="fromDay" type="int"><annotation><documentation>The forecasting result. Start day in month</documentation></annotation></element>
+			<element name="toDay" type="int"><annotation><documentation>The forecasting result. End day in the month</documentation></annotation></element>
+			<element name="intensive" type="frcst:PhaseResult"><annotation><documentation>Forecasting result for intensive phase of the regimen, or the whole regimen.</documentation></annotation></element>
+			<element name="continious" type="frcst:PhaseResult"><annotation><documentation>Forecasting result for continious phase of the regimen.</documentation></annotation></element>
+			<element name="addPhases" type="frcst:PhaseResult" maxOccurs="unbounded" minOccurs="0"><annotation><documentation>Forecasting result for additional phases of the regimen.</documentation></annotation></element>
+			<element name="weekList" type="frcst:WeekQuantity" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
+			<element name="cons" type="frcst:MedicineCons" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>List of medicine consumptions</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<complexType name="ForecastingOrder">
+	<annotation><documentation>The medicne replenishment order</documentation></annotation>
 		<sequence>
-			<element name="arrived" type="date"></element>
-			<element name="arrivalDate" type="frcst:Month"></element>
-			<element name="batch" type="frcst:ForecastingBatch"></element>
+			<element name="arrived" type="date"><annotation><documentation>The planned arrival date</documentation></annotation></element>
+			<element name="arrivalDate" type="frcst:Month"><annotation><documentation>The planned arrival date. Deprecated, but should be defined.</documentation></annotation></element>
+			<element name="batch" type="frcst:ForecastingBatch"><annotation><documentation>Medicines batch to arrive</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<complexType name="PhaseResult">
 		<annotation>
-			<documentation>This is a regimen result for one phase</documentation>
+			<documentation>Prospected cases in a phase of a regimen.</documentation>
 		</annotation>
 		<sequence>
-			<element name="newCases" type="decimal"></element>
-			<element name="oldCases" type="decimal"></element>
+			<element name="newCases" type="decimal"><annotation><documentation>Expected cases</documentation></annotation></element>
+			<element name="oldCases" type="decimal"><annotation><documentation>Enrolled cases</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<complexType name="MedicineCons">
+	<annotation><documentation>Consumption of a medicine in a Forecasting Result.</documentation></annotation>
 		<sequence>
-			<element name="medicine" type="qgen:Medicine"></element>
-			<element name="consIntensiveOld" type="decimal"></element>
-			<element name="consContiOld" type="decimal"></element>
-			<element name="consIntensiveNew" type="decimal"></element>
-			<element name="consContiNew" type="decimal"></element>
-			<element name="consOtherOld" type="decimal" maxOccurs="unbounded"
-				minOccurs="0">
-			</element>
-			<element name="consOtherNew" type="decimal" maxOccurs="unbounded"
-				minOccurs="0"></element>
+			<element name="medicine" type="qgen:Medicine"><annotation><documentation>The medicine or the medicinal product</documentation></annotation></element>
+			<element name="consIntensiveOld" type="decimal"><annotation><documentation>Consumption in the enrolled cases; intensive phase.</documentation></annotation></element>
+			<element name="consContiOld" type="decimal"><annotation><documentation>Consumption in the enrolled cases continuation phase</documentation></annotation></element>
+			<element name="consIntensiveNew" type="decimal"><annotation><documentation>Consumption in the expected cases; intensive phase.</documentation></annotation></element>
+			<element name="consContiNew" type="decimal"><annotation><documentation>Consumption in the expected cases continuation phase</documentation></annotation></element>
+			<element name="consOtherOld" type="decimal" maxOccurs="unbounded" minOccurs="0">
+			<annotation><documentation>Consumption in the enrolled cases other phases.</documentation></annotation></element>
+			<element name="consOtherNew" type="decimal" maxOccurs="unbounded" minOccurs="0"><annotation><documentation>Consumption in the expected cases;other phases.</documentation></annotation></element>
 		</sequence>
 	</complexType>
-
-
 	<complexType name="PricePack">
+	<annotation><documentation>Price of a pack on a medicinal product. It is used only in QuanTB.</documentation></annotation>
 		<sequence>
-			<element name="adjust" type="decimal"></element>
-			<element name="adjustAccel" type="decimal"></element>
-			<element name="pack" type="int"></element>
-			<element name="packAccel" type="int"></element>
-			<element name="packPrice" type="decimal"></element>
-			<element name="packPriceAccel" type="decimal"></element>
+			<element name="adjust" type="decimal"><annotation><documentation>Adjustment koefficient for packs in a regular order</documentation></annotation></element>
+			<element name="adjustAccel" type="decimal"><annotation><documentation>Adjustment koefficient for packs in an accelerated order</documentation></annotation></element>
+			<element name="pack" type="int"><annotation><documentation>Pack size for a regular order in units of a medicinal product.</documentation></annotation></element>
+			<element name="packAccel" type="int"><annotation><documentation>Pack size for am accelerated order in units of a medicinal product.</documentation></annotation></element>
+			<element name="packPrice" type="decimal"><annotation><documentation>Pack price for a regular order</documentation></annotation></element>
+			<element name="packPriceAccel" type="decimal"><annotation><documentation>Pack size for an accelerated order</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<complexType name="ForecastingTotalItem">
+		<annotation><documentation>Additional expenses for a medicinal product order. It is used only in QuanTB.</documentation></annotation>
 		<sequence>
-			<element name="item" type="string"></element>
-			<element name="perCents" type="decimal"></element>
-			<element name="value" type="decimal"></element>
+			<element name="item" type="string"><annotation><documentation>Name of the item, e.g. Freight</documentation></annotation></element>
+			<element name="perCents" type="decimal"><annotation><documentation>The price of the item. Percents of the total order price</documentation></annotation></element>
+			<element name="value" type="decimal"><annotation><documentation>The price of the item. In case when calculation can't be by percents of the total order price</documentation></annotation></element>
 			<element name="isValue" type="boolean">
 				<annotation>
 					<documentation>
@@ -454,35 +406,38 @@
 	</complexType>
 
 	<complexType name="WeekQuantity">
+		<annotation><documentation>Deprecated and outdated.</documentation></annotation>
 		<sequence>
-			<element name="weekNo" type="int"></element>
-			<element name="quantity" type="int"></element>
-			<element name="newQuantity" type="int"></element>
+			<element name="weekNo" type="int"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
+			<element name="quantity" type="int"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
+			<element name="newQuantity" type="int"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 	<complexType name="ForecastFile">
+		<annotation><documentation>A descriptor for qtb file for QuanTB</documentation></annotation>
 		<sequence>
-			<element name="name" type="string"></element>
-			<element name="path" type="string"></element>
+			<element name="name" type="string"><annotation><documentation>File name</documentation></annotation></element>
+			<element name="path" type="string"><annotation><documentation>File path in the local file system</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
 
 	<complexType name="ForecastLast5">
+		<annotation><documentation>Last five files loaded to QuanTB</documentation></annotation>
 		<sequence>
-			<element name="forecastFile" type="frcst:ForecastFile"
-				maxOccurs="unbounded" minOccurs="0"></element>
+			<element name="forecastFile" type="frcst:ForecastFile" maxOccurs="unbounded" minOccurs="0"><annotation><documentation>Defines forecastFile, used in medicinal product forecasting (max 128 chars).</documentation></annotation></element>
 		</sequence>
 	</complexType>
 
-	<element name="forecastLast5" type="frcst:ForecastLast5"></element>
+	<element name="forecastLast5" type="frcst:ForecastLast5"><annotation><documentation>Last five files loaded to QuanTB</documentation></annotation></element>
 
 	<complexType name="KitDefinition">
+		<annotation><documentation>Deprecated and outdated.</documentation></annotation>
 		<sequence>
-			<element name="kitName" type="string"></element>
-			<element name="inventory" type="frcst:ForecastingBatch" minOccurs="0" maxOccurs="unbounded"></element>
-			<element name="orders" type="frcst:ForecastingOrder" minOccurs="0" maxOccurs="unbounded"></element>
+			<element name="kitName" type="string"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
+			<element name="inventory" type="frcst:ForecastingBatch" minOccurs="0" maxOccurs="unbounded"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
+			<element name="orders" type="frcst:ForecastingOrder" minOccurs="0" maxOccurs="unbounded"><annotation><documentation>Deprecated and outdated.</documentation></annotation></element>
 		</sequence>
 	</complexType>
 </schema>

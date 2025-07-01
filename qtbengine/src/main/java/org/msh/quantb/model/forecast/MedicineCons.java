@@ -18,6 +18,8 @@ import org.msh.quantb.model.gen.Medicine;
 
 
 /**
+ * Consumption of a medicine in a Forecasting Result.
+ * 
  * <p>Java class for MedicineCons complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

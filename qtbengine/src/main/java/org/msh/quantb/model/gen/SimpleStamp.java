@@ -17,7 +17,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * This data block stores last updater and update time for XML document
+ * Any string. Only QuanTB uses this data internally for user interface.
  * 
  * <p>Java class for SimpleStamp complex type.
  * 

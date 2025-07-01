@@ -23,7 +23,7 @@ Click the button below to download the latest release as a ZIP file.
 The `qtbengine` repository is organized to help you explore, understand, and use the library effectively:
 
 - **`bin/`** — Contains the ready-to-use library compiled under Java 21 and a basic example to quick start
-- **`doc/`** — Contains basic start-up and use cases guides
+- **`doc/`** — Contains start-up and usage guides
 - **`qtbengine/`** — The heart of the project. This folder contains the Java source code that implements morbidity-based forecasting logic.
 
 ## Contributions

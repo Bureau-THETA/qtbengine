@@ -15,6 +15,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Additional expenses for a medicinal product order. It is used only in QuanTB.
+ * 
  * <p>Java class for ForecastingTotalItem complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

@@ -17,6 +17,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Result of a forecasting calculation for days, usually for one day.
+ * 
  * <p>Java class for ForecastingResult complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

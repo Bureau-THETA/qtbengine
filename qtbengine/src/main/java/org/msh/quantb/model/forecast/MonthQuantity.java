@@ -14,9 +14,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * Integer quantity something in month given (cases,
- * 				medicines, etc)
- * 			
+ * Quantity of enrolled or expected cases in a month given.
  * 
  * <p>Java class for MonthQuantity complex type.
  * 

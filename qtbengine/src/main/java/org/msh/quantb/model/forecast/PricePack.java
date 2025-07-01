@@ -15,6 +15,8 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
+ * Price of a pack on a medicinal product. It is used only in QuanTB.
+ * 
  * <p>Java class for PricePack complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.

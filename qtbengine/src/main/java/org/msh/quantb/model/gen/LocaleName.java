@@ -16,7 +16,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * 
- *     			Name of something together with locale
+ *     			Name of the current language locale. Only QuanTB uses this data internally for user interface.
  *     		
  * 
  * <p>Java class for LocaleName complex type.
