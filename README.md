@@ -1,5 +1,4 @@
 <h1 align="center"><strong>Predict. Prepare. Prevent.</strong></h1>
-<h1 align="center"><strong>The Quantification Engine</strong></h1>
 
 ## Trusted worldwide morbidity-based forecasting of medicinal products right inside your health IT stack
 ## 📌 Project Overview

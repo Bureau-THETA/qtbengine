@@ -1,5 +1,4 @@
 <h1 align="center"><strong>Predict. Prepare. Prevent.</strong></h1>
-<h1 align="center"><strong>The Quantification Engine</strong></h1>
 
 ## Trusted worldwide morbidity-based forecasting of medicinal products right inside your health IT stack
 ## 📌 Project Overview
@@ -14,6 +13,7 @@ The health and logistics records are sources of the input data. The output is a 
 
 ### 🚀 Get Started
 Click the button below to download the latest release as a ZIP file.
+
 [Download Latest Release](https://github.com/Bureau-THETA/qtbengine/releases/latest)
 
 
